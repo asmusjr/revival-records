@@ -22,7 +22,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="navbar navbar-inverse navbar-static-top navbar-custom" role="navigation">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -31,7 +31,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><img src="img/logo.png"/></a>
+              <a class="navbar-brand" href="#"><img id="navbar-image" src="img/logo.png" alt="Revival Records"></a>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
@@ -54,60 +54,53 @@
         </div>
 
     <div class="container">
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="img/digging at revival.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>We've moved to a bigger store!</h1>
-              <p>We are now located at 128 S. Barstow St.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Visit us</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="img/revdif.png" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Promotional Material</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="img/RSDvector2_20131.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>International Record Day</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div><!-- /.carousel -->
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		  </ol>
+		  <div class="carousel-inner">
+			<div class="item active">
+			  <img src="img/digging at revival.jpg" alt="First slide">
+			  <div class="container">
+				<div class="carousel-caption">
+				  <h1>We've moved to a bigger store!</h1>
+				  <p>We are now located at 128 S. Barstow St.</p>
+				  <p><a class="btn btn-lg btn-danger" href="#" role="button">Visit us</a></p>
+				</div>
+			  </div>
+			</div>
+			<div class="item">
+			  <img src="img/revdif.png" alt="Second slide">
+			  <div class="container">
+				<div class="carousel-caption">
+				  <h1>Promotional Material</h1>
+				  <p>The various promotional information can go on this part.</p>
+				  <p><a class="btn btn-lg btn-warning" href="#" role="button">Learn more</a></p>
+				</div>
+			  </div>
+			</div>
+			<div class="item">
+			  <img src="img/RSDvector2_20131.jpg" alt="Third slide">
+			  <div class="container">
+				<div class="carousel-caption">
+				  <h1>International Record Day</h1>
+				  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				  <p><a class="btn btn-lg btn-danger" href="#" role="button">Browse gallery</a></p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>
 	</div>
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-
+    <div class="container main-content">
       <!-- Three columns of text below the carousel -->
-      <div class="row">
+      <div class="marketing row">
 		  <div class="col-lg-4">
 			<img class="img-circle" src="img/P1050121.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 			<h2>Dig Through Our Wide Variety of New and Used Records</h2>
