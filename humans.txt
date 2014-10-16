@@ -2,12 +2,14 @@
 # The humans responsible & technology colophon
 
 # TEAM
-
-    <name> -- <role> -- <twitter>
-
+	Adam Al-Ibrahim
+	John Asmus
+	Caleb Olson
+	Natalie Wolf
+	
 # THANKS
 
-    <name>
+    Ryan Hardt
 
 # TECHNOLOGY COLOPHON
 
