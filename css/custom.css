@@ -1,5 +1,5 @@
 body {
-  background-image:url("../img/swirl_pattern.png");
+  background-image:url("../img/swirl_pattern.png"); // source: Subtle Patterns, Uday -- http://subtlepatterns.com/swirl-2/
   font-family: Century Gothic, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -41,6 +41,8 @@ footer {
 	height: 440px;
 	padding: 10px;
 	border: 2px solid #CCC;
+	  background-color:white;
+
 }
 
 #map-container {
