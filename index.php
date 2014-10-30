@@ -3,69 +3,20 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Revival Records - Eau Claire Records</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Revival Records - Eau Claire Records</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/boilerplate.css">
-    	<link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/custom.css">
-		
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-		
-		<!--- NAVBAR AND FOOTER --->
-       <div class="navbar navbar-inverse navbar-static-top navbar-custom" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#"><img id="navbar-image" src="img/logo.png" alt="Revival Records"></a>
-            </div>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About the Store</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Records <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-				    <li><a href="records.html">About our Records</a></li>
-                    <li><a href="record_catalog.html">View all Records</a></li>
-                    <li class="divider"></li>
-                    <li><a href="wishlist.html">Wishlist</a></li>
-                    <li><a href="request.html">Send Request</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-		
-		<nav class="navbar navbar-fixed-bottom" role="navigation">
-			<footer>
-				<div class="container">
-					<p class="pull-right"><a href="visit.html">128 S. Barstow St &middot; Eau Claire</a></p>
-					<p><a href="#">715-514-4202</a></p>
-				</div><!-- /.container -->
-			</footer>
-		</nav>
-		<!-- END NAVBAR AND FOOTER -->
-
+		<link rel="stylesheet" href="css/master.css">
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+		<?php include 'header-footer.php' ?>
 		<div class="container">
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			  <!-- Indicators -->
@@ -112,7 +63,6 @@
 		</div>
 
 		<div class="container main-content">
-		  <!-- Three columns of text below the carousel -->
 		  <div class="marketing row">
 			  <div class="col-lg-4">
 				<img class="img-circle" src="img/P1050121.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
@@ -130,9 +80,8 @@
 			<div class="col-lg-4">
 			  <img class="img-circle" src="img/P1050061.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 			  <h2>WE'VE MOVED TO A BIGGER STORE!</h2>
-			  <p>Now Located at 128 S. Barstow St
-
-	Grand Opening Wed, March 5, 2014 at 11:00 AM!</p>
+			  <p>Now Located at 128 S. Barstow St</p>
+			  <p>Grand Opening Wed, March 5, 2014 at 11:00 AM!</p>
 			  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 			</div><!-- /.col-lg-4 -->
 		  </div><!-- /.row -->
