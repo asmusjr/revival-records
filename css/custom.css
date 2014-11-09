@@ -5,6 +5,7 @@ body {
   line-height: 18px;
   color: #333333;
   margin: 0;
+  padding-bottom:2px;
 }
 
 .navbar-custom {
@@ -63,7 +64,7 @@ footer {
 /* Carousel base class */
 .carousel {
   border-radius: 25px;
-  height: 500px;
+  height: 475px;
   margin-bottom: 40px;
 }
 
@@ -76,7 +77,7 @@ footer {
 /* Declare heights because of positioning of img element */
 .carousel .item {
   border-radius: 25px;
-  height: 500px;
+  height: 475px;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -86,7 +87,7 @@ footer {
   left: 0;
   width:100%;
   /*min-width: 100%;*/
-  height: 500px;
+  height: 475px;
 }
 
 .carousel-control {
@@ -149,8 +150,7 @@ footer {
 }
 
 
-.polaroid_imgs a
-{
+.polaroid_imgs a {
 	background: white;
 	display: inline;
 	float: left;
@@ -192,20 +192,18 @@ footer {
 	-moz-transform: rotate(-24deg); 
 	transform: rotate(-24deg); 
 }
-.polaroid_imgs a:nth-child(4n)
-{
+.polaroid_imgs a:nth-child(4n) {
 	-webkit-transform: rotate(14deg);  
 	-moz-transform: rotate(14deg); 
 	transform: rotate(14deg); 
 }
-.polaroid_imgs a:nth-child(5n)
-{
+.polaroid_imgs a:nth-child(5n) {
 	-webkit-transform: rotate(-18deg);  
 	-moz-transform: rotate(-18deg); 
 	transform: rotate(-18deg); 
 }
 
-.polaroid_imgs a:hover{
+.polaroid_imgs a:hover {
 	-webkit-transform: rotate(0deg); 
 	-moz-transform: rotate(0deg);
         transform: rotate(0deg);
@@ -340,9 +338,4 @@ ul { padding: 0; }
   color: #999999;
   background-color: #fff;
   cursor: default;
-}
-
-.footer, .push{
-
-	height: 4em;
 }

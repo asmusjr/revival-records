@@ -9,72 +9,16 @@
 		<title>Revival Records - Eau Claire Records</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
 		<link rel="stylesheet" href="css/master.css">
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-		
-		
-		
-		<script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
 	</head>
 	<body>
-		<!--- NAVBAR AND FOOTER --->
-       <div class="navbar navbar-inverse navbar-static-top navbar-custom" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#"><img id="navbar-image" src="img/logo.png" alt="Revival Records"></a>
-            </div>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About the Store</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Records <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-				    <li><a href="records.html">About our Records</a></li>
-                    <li><a href="record_catalog.html">View all Records</a></li>
-                    <li class="divider"></li>
-                    <li><a href="wishlist.html">Wishlist</a></li>
-                    <li><a href="request.html">Send Request</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-		
-		<nav class="navbar navbar-fixed-bottom" role="navigation">
-			<footer>
-				<div class="container">
-					<p class="pull-right"><a href="#">128 S. Barstow St &middot; Eau Claire</a></p>
-					<p><a href="#">715-514-4202</a></p>
-				</div><!-- /.container -->
-			</footer>
-		</nav>
-		<!-- END NAVBAR AND FOOTER -->
-
-   		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					
-				</div>
-			</div>
+		<?php include 'header-footer.php' ?>
+		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
-				<h2>About <span class="text-muted">Revival Records</span></h2>
+					<h2>About <span class="text-muted">Revival Records</span></h2>
 					<div class="polaroid_imgs">
 						<a title="Billy Siegel"><img height="250" src="img/billy_siegel.jpg" alt="img1" title="Billy Siegel" /></a><a title="Revival Records"><img height="250" src="img/revdif.png" alt="img2" title="Revival Records" /></a>
 					</div>
@@ -109,5 +53,9 @@
 				</div>
 			</div>
 		</div>
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

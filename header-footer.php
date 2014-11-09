@@ -9,19 +9,19 @@
             </button>
             <a class="navbar-brand" href="#"><img id="navbar-image" src="img/logo.png" alt="Revival Records"></a>
 		</div>
-		<div class="navbar-collapse collapse">
+		<div id="top-nav" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="index.php">Home</a></li>
-                <li><a href="about.php">About the Store</a></li>
-                <li><a href="contact.php">Contact</a></li>
+				<li><a href="/test/index.php">Home</a></li>
+                <li><a href="/test/about.php">About</a></li>
+                <li><a href="/test/contact.php">Contact</a></li>
                 <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Records <span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="records.php">About our Records</a></li>
-						<li><a href="record_catalog.php">View all Records</a></li>
+						<li><a href="/test/records.php">About our Records</a></li>
+						<li><a href="/test/record_catalog.php">View all Records</a></li>
 						<li class="divider"></li>
-						<li><a href="wishlist.php">Wishlist</a></li>
-						<li><a href="request.php">Send Request</a></li>
+						<li><a href="/test/wishlist.php">Wishlist</a></li>
+						<li><a href="/test/request.php">Send Request</a></li>
 					</ul>
                 </li>
 			</ul>
@@ -32,8 +32,8 @@
 <nav class="navbar navbar-fixed-bottom" role="navigation">
 	<footer>
 		<div class="container">
-			<p class="pull-right"><a href="visit.php">128 S. Barstow St &middot; Eau Claire</a></p>
-			<p><a href="#">715-514-4202</a></p>
+			<p class="pull-right"><a href="/test/visit.php">128 S. Barstow St &middot; Eau Claire</a></p>
+			<p><a href="/test/visit.php">715-514-4202</a></p>
 		</div><!-- /.container -->
 	</footer>
 </nav>
