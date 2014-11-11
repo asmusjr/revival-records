@@ -13,6 +13,29 @@
 		<link rel="stylesheet" href="css/master.css">
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
+	<?php
+		function postRecordRequest(){
+			$servername = "68.178.217.19";
+			$username = "revivalrecordsdb";
+			$password = "RevivalRecords123!";
+			//$dbname = "revivalrecordsdb";
+
+			// Create connection
+			$conn = mysqli_connect($servername, $username, $password);
+			// Check connection
+			if (!$conn) {
+				die("Connection failed: " . mysqli_connect_error());
+			}
+			$sql = "INSERT INTO Record_Request (request_email)
+			VALUES ('GOOCH')";
+			if (mysqli_query($conn, $sql)) {
+				echo "New record created successfully";
+			} else {
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+			}
+			mysqli_close($conn);
+		}
+	?> 
 	<body>
 		<?php include 'header-footer.php' ?>
 		
@@ -52,7 +75,7 @@
 				<h4 class="modal-title" id="myModalLabel">Request a Record</h4>
 			  </div>
 			  <div class="modal-body">
-				<form>
+				<form action="records.php" method="postRecordRequest">
 					<div class="form-group">
 						<label for="inputName">Name</label>
 						<input type="name" class="form-control" id="inputName" placeholder="Name">
