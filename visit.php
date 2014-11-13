@@ -12,7 +12,9 @@
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link rel="stylesheet" href="css/master.css">
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-		
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    	<script type="text/javascript" src="js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
+    
 		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 		
 		<script>
@@ -70,9 +72,7 @@
 			</tr>
 		</table>
 	</div>
-		
-        <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>

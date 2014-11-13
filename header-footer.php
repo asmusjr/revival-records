@@ -7,13 +7,13 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="#"><img id="navbar-image" src="img/logo.png" alt="Revival Records"></a>
+		  <a class="navbar-brand" href="animationIndex.html"><img id="navbar-image" src="img/logo.png" alt="Revival Records"></a>
 		</div>
 		
 		<div id="top-nav" class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
 			<li><a href="index.php">Home</a></li>
-			<li><a href="about.php">About the Store</a></li>
+			<li><a href="about.php">About</a></li>
 			<li><a href="contact.php">Contact</a></li>
 			<li class="dropdown">
 			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Records <span class="caret"></span></a>

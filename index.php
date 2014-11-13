@@ -14,26 +14,9 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="css/master.css">
         
-		
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     	<script type="text/javascript" src="js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $("#jquery_jplayer_1").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            title: "Test song",
-            m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-            oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-          });
-        },
-        swfPath: "js/jQuery.jPlayer.2.7.0",
-        supplied: "m4a, oga"
-      });
-    });
-  </script>
-  
     </head>
     
     <body>
