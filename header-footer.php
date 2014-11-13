@@ -23,6 +23,8 @@
 				<li class="divider"></li>
 				<li><a href="wishlist.php">Wishlist</a></li>
 				<li><a href="request.php">Send Request</a></li>
+				<li class="divider"></li>
+				<li><a href="visit.php">Visit Us</a></li>
 			  </ul>
 			</li>
 			<li><div id="jquery_jplayer_1" class="jp-jplayer"></div>
