@@ -12,7 +12,7 @@ $(document).ready(function(){
   });
 });
 
-$(function() {
+$(function() {		// updates active link on navbar
 	var li = $('#top-nav a[href$="' + location.pathname.split("/")[2] + '"]');
 	if(li.length == 0) {
 		$('#top-nav a[href$="index.php"]').parent().addClass('active');
