@@ -20,13 +20,8 @@
 		<?php include 'header-footer.php' ?>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
-					<h2>About <span class="text-muted">Revival Records</span></h2>
-					<div class="polaroid_imgs">
-						<a title="Billy Siegel"><img height="250" src="img/billy_siegel.jpg" alt="img1" title="Billy Siegel" /></a><a title="Revival Records"><img height="250" src="img/revdif.png" alt="img2" title="Revival Records" /></a>
-					</div>
-				</div>
 				<div class="col-md-4 main-content">
+					<h2>About <span class="text-muted">Revival Records</span></h2>
 					Walking into Revival Records for the first time, one gets an overwhelming sense of community.
 					It is a community of seekers,
 					not only in the sense of finding the next great piece of nostalgia or favorite hit song,
@@ -43,6 +38,11 @@
 					bringing a favorite album to the counter, 
 					and bringing it home to play for oneself and others is a timeless act that allows others to share their ideas within the Chippewa Valley community and beyond.
 					Revival Records has created an atmosphere that promotes the sharing of the listening experience and feels like a lot more than a business, it feels like an extension of home.
+				</div>
+				<div class="col-md-8">
+					<div class="polaroid_imgs">
+						<a title="Billy Siegel"><img height="250" src="img/billy_siegel.jpg" alt="img1" title="Billy Siegel" /></a><a title="Revival Records"><img height="250" src="img/revdif.png" alt="img2" title="Revival Records" /></a>
+					</div>
 				</div>
 			</div>
 			<div class="row">

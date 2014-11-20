@@ -70,29 +70,28 @@
 			</div>
 		</div>
 
+
+		
 		<div class="container main-content">
 		  <!-- Three columns of text below the carousel -->
 		  <div class="marketing row">
 			  <div class="col-lg-4">
 				<img class="img-circle" src="img/P1050121.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-				<h2>Dig Through Our Wide Variety of New and Used Records</h2>
+				<h2><?php include 'index/title-1.txt' ?></h2>
 				<p>While we specialize in rock and roll records, we also carry a fantastic selection of new and used blues records, jazz records, soundtracks, reggae records, country records, hip hop and much more. We have a unique variety of LPs and 45s, 12" singles, 7" singles, and we also sell CDs. In addition to music we have record accessories, audio equipment, and apparel. Bottom line, there is something for everyone at Revival Records!</p>
 				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 				</div><!-- /.col-lg-4 -->
 			  <div class="col-lg-4">
 				<img class="img-circle" src="img/P1050105.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-			  <h2>Eau Claire's #1 Record Store</h2>
+			  <h2><?php include 'index/title-2.txt'?></h2>
 			  <p>Welcome to Eau Claire's number one record store! We are conveniently located in Downtown Eau Claire on the corner of S. Barstow and Gray St. We have a vast selection of countless records spanning across all genres. Our collection is made up of new and used records and we also buy records right here in the store. We want each person who comes to dig through our records to discover something new or something treasured.  No matter what the customer craves, the vast and varied collection at Revival Records can please the pickiest listeners.</p>
-			  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			  <p><a class="btn btn-default" href="about.php" role="button">View details &raquo;</a></p>
 			</div><!-- /.col-lg-4 -->
 
 			<div class="col-lg-4">
 			  <img class="img-circle" src="img/P1050061.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-			  <h2>WE'VE MOVED TO A BIGGER STORE!</h2>
-			  <p>Now Located at 128 S. Barstow St
-
-	Grand Opening Wed, March 5, 2014 at 11:00 AM!</p>
-			  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			  <h2><?php include 'index/title-3.txt'?></h2>
+			  <p><?php include 'index/content-3.html'?></p>
 			</div><!-- /.col-lg-4 -->
 		  </div><!-- /.row -->
 		</div>
