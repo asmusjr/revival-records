@@ -1,14 +1,15 @@
 @charset "UTF-8";
 
 .outer {
-	position: absolute;
-   top: 50%;
-   margin-top: -225px;/* half of #content height*/
-   left: 0;
-   width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: 10px;/* half of #content height*/
+  left: 0;
+  width: 100%;
 }
 
 .inner {
+	top:5px;
 	width: 675px;
     margin-left: auto;
     margin-right: auto;
@@ -54,4 +55,3 @@
 	position: absolute;
 	margin: 0 auto;
 }
-

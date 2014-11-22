@@ -7,7 +7,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="animationIndex.html"><img id="navbar-image" src="img/logo.png" alt="Revival Records"></a>
+		  <a data-toggle="modal" data-target="#myModal" class="navbar-brand" href="#"><img id="navbar-image" src="img/logo.png" alt="Revival Records"></a>
 		</div>
 		
 		<div id="top-nav" class="navbar-collapse collapse">
@@ -41,3 +41,13 @@
 			</div><!-- /.container -->
 		</footer>
 	</nav>
+	
+	<div class="modal fade modal-fullscreen force-fullscreen" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-body">
+			<?php include 'animation-intro.html' ?>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->

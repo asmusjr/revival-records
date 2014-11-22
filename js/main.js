@@ -12,6 +12,8 @@ $(document).ready(function(){
   });
 });
 
+// $('#myModal').modal();
+
 $(function() {		// updates active link on navbar
 	var li = $('#top-nav a[href$="' + location.pathname.split("/")[2] + '"]');
 	if(li.length == 0) {
