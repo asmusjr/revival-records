@@ -14,16 +14,19 @@
         <link rel="stylesheet" href="css/master.css">
         
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    	<script type="text/javascript" src="js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    	<script src="js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
     </head>
     
     <body>
-        <!--[if lt IE 7]>
+		<?php include 'header-footer.php' ?>
+        
+		<!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-		<?php include 'header-footer.php' ?>
 
 		<div class="container">
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -70,8 +73,6 @@
 			</div>
 		</div>
 
-
-		
 		<div class="container main-content">
 		  <!-- Three columns of text below the carousel -->
 		  <div class="marketing row">
@@ -96,11 +97,6 @@
 		  </div><!-- /.row -->
 		</div>
 
-        
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--<script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -109,7 +105,6 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-        -->
+        </script>-->
     </body>
 </html>

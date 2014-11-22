@@ -7,7 +7,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a data-toggle="modal" data-target="#myModal" class="navbar-brand" href="#"><img id="navbar-image" src="img/logo.png" alt="Revival Records"></a>
+		  <a data-toggle="modal" data-target="#animation-intro" class="navbar-brand" href="#"><img id="navbar-image" src="img/logo.png" alt="Revival Records"></a>
 		</div>
 		
 		<div id="top-nav" class="navbar-collapse collapse">
@@ -18,13 +18,8 @@
 			<li class="dropdown">
 			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Records <span class="caret"></span></a>
 			  <ul class="dropdown-menu" role="menu">
-				<li><a href="records.php">About our Records</a></li>
-				<li><a href="record_catalog.php">View all Records</a></li>
-				<li class="divider"></li>
-				<li><a href="wishlist.php">Wishlist</a></li>
-				<li><a href="request.php">Send Request</a></li>
-				<li class="divider"></li>
-				<li><a href="visit.php">Visit Us</a></li>
+				<li><a href="record_catalog.php">Records Catalog</a></li>
+				<li><a href="my_records.php">My Records</a></li>
 			  </ul>
 			</li>
 			</ul>
@@ -36,18 +31,13 @@
 		<?php include 'music-player.php' ?>
 		<footer>
 			<div class="container">
-				<p class="pull-right"><a href="visit.php">128 S. Barstow St &middot; Eau Claire</a></p>
-				<p><a href="#">715-514-4202</a></p>
+				<p class="pull-right"><a href="contact.php">715-514-4202 &middot; 128 S. Barstow St &middot; Eau Claire</a></p>
+				<p>
+					<a href="https://www.facebook.com/pages/Revival-Records/111980655498485" target="_blank"><img src="img/facebook-icon.png" width="35px" style="margin-top:-20px" alt="Join our Facebook Fan Page"></a>
+					<a href="https://twitter.com/RevivalRcrds" target="_blank"><img src="img/twitter-icon.png" width="35px" style="margin-top:-20px" alt="Follow us on Twitter"></a>
+				</p>
 			</div><!-- /.container -->
 		</footer>
 	</nav>
 	
-	<div class="modal fade modal-fullscreen force-fullscreen" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-		<div class="modal-content">
-		  <div class="modal-body">
-			<?php include 'animation-intro.html' ?>
-		  </div>
-		</div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+	<?php include 'animation-intro.html' ?>

@@ -8,6 +8,10 @@
   width: 100%;
 }
 
+#animation-background {
+ background:url("http://st.depositphotos.com/1008191/2063/i/950/depositphotos_20638031-grunge-faded-chevron-stripes-red-and-white-background-zigzag-pattern.jpg");
+}
+
 .inner {
 	top:5px;
 	width: 675px;

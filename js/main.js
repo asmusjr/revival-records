@@ -13,6 +13,9 @@ $(document).ready(function(){
 });
 
 // $('#myModal').modal();
+// to-do: check if index
+//			check if mobile
+//			check if visitor's first time visiting site ?
 
 $(function() {		// updates active link on navbar
 	var li = $('#top-nav a[href$="' + location.pathname.split("/")[2] + '"]');
