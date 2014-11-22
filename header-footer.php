@@ -33,8 +33,8 @@
 			<div class="container">
 				<p class="pull-right"><a href="contact.php">715-514-4202 &middot; 128 S. Barstow St &middot; Eau Claire</a></p>
 				<p>
-					<a href="https://www.facebook.com/pages/Revival-Records/111980655498485" target="_blank"><img src="img/facebook-icon.png" width="35px" style="margin-top:-20px" alt="Join our Facebook Fan Page"></a>
-					<a href="https://twitter.com/RevivalRcrds" target="_blank"><img src="img/twitter-icon.png" width="35px" style="margin-top:-20px" alt="Follow us on Twitter"></a>
+					<a href="https://www.facebook.com/pages/Revival-Records/111980655498485" target="_blank"><img src="img/facebook-icon.png" class="social-media-icon" alt="Like our Facebook Fan Page"></a>
+					<a href="https://twitter.com/RevivalRcrds" target="_blank"><img src="img/twitter-icon.png" class="social-media-icon" alt="Follow us on Twitter"></a>
 				</p>
 			</div><!-- /.container -->
 		</footer>

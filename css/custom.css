@@ -61,6 +61,17 @@ footer {
   background-color: black;
 }
 
+.social-media-icon {
+  width:35px;
+  margin-top:-20px;
+  -webkit-transition: margin-top 1s; /* For Safari 3.1 to 6.0 */
+  transition: margin-top 1s;
+}
+
+.social-media-icon:hover {
+  margin-top:-40px;
+}
+
 /*Embedded Google map*/
 
 #map-outer {  
