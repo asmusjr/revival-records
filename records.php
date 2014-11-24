@@ -1,34 +1,4 @@
-    <?php
-		/*function postRecordRequest(){
-            echo "buttstick";
-			$servername = "68.178.217.19";
-			$username = "revivalrecordsdb";
-			$password = "RevivalRecords123!";
-			$dbname = "revivalrecordsdb";
-            
-            $conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
-            $db_selected = mysql_select_db($dbname, $conn);  if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
-            
-            $name = $_POST["name"];
-            $email = $_POST["email"];
-            $phone = $_POST["phone"];
-            $record = $_POST["record"];
-            $request_first = $_POST["firstName"];
-            $request_last = $_POST["lastName"];
-            $current_date = date("Y-m-d H:i:s");
-            $record_id = $_POST["recordID"];
-            // run a query to get records and populate dropdown with existing records to assign request_record in below query
-			$sql = mysql_query("INSERT INTO Record_Request (record_id, request_email, request_phone, request_record, request_first, request_last, request_date)
-			VALUES ('$record_id', '$email', '$phone', null, '$request_first', '$request_last', '$current_date')");
-			if ($sql) {
-				echo "New record created successfully";
-			} else {
-				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-			}
-			mysqli_close($conn);
-			echo "DONE JEAH";
-		}*/
-	?>
+
   <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -167,6 +137,27 @@
 			<label for="inputRecord">Record</label>
 			<input type="text" name="Record" class="form-control" id="inputRecord" placeholder="Record" data-validation="length" data-validation-length="min1">
 	  </div>
+      <div class="form-group">
+        <label for="inputRecord">Chosen Records</label>
+        <?php
+			$servername = "68.178.217.19";
+			$username = "revivalrecordsdb";
+			$password = "RevivalRecords123!";
+			$dbname = "revivalrecordsdb";
+            
+            $conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
+            $db_selected = mysql_select_db($dbname, $conn);  if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
+            
+            $result = mysql_query("SELECT * FROM Record"); 
+            
+            while($row = mysql_fetch_array($result)) 
+              {  
+              echo $row['record_name'];
+              echo '<br>'; 
+              } 
+			mysql_close($conn);
+	    ?>       
+      </div>
       <div class="modal-footer">
             <button type="button" class="btn btn-lg" data-dismiss="modal">Close</button>
             <button type="submit" name="submit" class="btn btn-lg btn-primary">Submit Request</button>
@@ -175,39 +166,7 @@
       <input type="hidden" name="form_delivery" value="default"/> 
       <input type="hidden" name="form_format" value="html"/>
       </form>
-      
-
-		<!--<form action="records.php" method="post">
-			<div class="form-group">
-				<label for="inputFirstName">First Name</label>
-				<input type="text" name="firstName" class="form-control" id="inputFirstName" placeholder="First Name">
-			</div>
-            <div class="form-group">
-    			<label for="inputLastName">Last Name</label>
-				<input type="text" name="lastName" class="form-control" id="inputLastName" placeholder="Last Name">
-			</div>
-			<div class="form-group">
-				<label for="inputEmail">Email</label>
-				<input type="text" name="email" class="form-control" id="inputEmail" placeholder="Email">
-			</div>
-			<div class="form-group">
-				<label for="inputPhone">Phone</label>
-				<input type="text" name="phone" class="form-control" id="inputPhone" placeholder="Phone">
-			</div>
-			<div class="form-group">
-				<label for="inputRecord">Record</label>
-				<input type="text" name="record" class="form-control" id="inputRecord" placeholder="Record">
-			</div>
-            <div class="form-group">
-				<label for="inputRecordID">Record ID JEAH</label>
-				<input type="text" name="recordID" class="form-control" id="inputRecord" placeholder="Record">
-			</div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-lg" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-lg btn-primary">Submit Request</button>
-            </div>
-		</form>-->
+     
       </div>
     </div>
   </div>
