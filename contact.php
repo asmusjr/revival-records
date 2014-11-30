@@ -39,50 +39,28 @@
 		<div class="container">
 			<div class="row">
 				<div class="featurette">
-					<div class="col-md-7 main-content">
-						<h2>Contact <span class="text-muted">Revival Records</span></h2>
-						<p class="lead">Telephone: 715-514-4202</p>
-						<p class="lead">Address: 128 S. Barstow St</p>
-						<p class="lead">Eau Claire, WI 54701</p>
-						<p class="lead">Store Hours:</p>
-						<p class="lead">Open Monday thru Saturday</p>
-						<p class="lead">11AM -7PM. Closed Sundays</p>
-						<p class="lead">Owner: Billy Siegel</p>
-						<p class="lead">Email: billy@revivalrecords.co</p>
-					</div>
-					<div class="col-md-5">
-						<div class = "polaroid_imgs">
-							<a title="Billy Siegel"><img class="featurette-image img-resposive" height = "400" src="img/billy_siegel.jpg" alt="The store owner, Billy Siegel"></a>
-						</div>
+					<div class="col-md-12 main-content">
+                    	<div class="col-md-4">
+                            <h2 class="content-large-header">Contact <span class="text-muted">Revival Records</span></h2>
+                            <h4 class="text-muted">Explore our record collection today.</h4>
+                           	<br />
+                            <h4 class="text-muted no-margin">Call us</h4>
+                            <span class="lead small-text-muted">715-514-4202</span>
+                            <h4 class="text-muted no-margin">Email us</h4>
+                            <span class="lead small-text-muted">billy@revivalrecords.co</span>
+                            <h4 class="text-muted no-margin">Visit us</h4>
+                            <span class="lead small-text-muted">
+                            						128 S. Barstow St.<br/>
+                                                    Eau Claire, Wisconsin<br/>
+                                                    54701<br/></span>
+                            <br/>
+                            <span class="lead small-text-muted">Open Monday through Saturday <br/> 11AM - 7PM.<br/>
+                                            				Closed Sundays.</span>
+                        </div>
+                       	<div id="map-container" class="col-lg-8 col-md-8 col-sm-12 col-xs-12"></div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-			  <div id="map-outer" class="col-lg-7 col-md-8 col-sm-12 col-xs-12">
-				  <div id="address" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 rowTextCentered">
-					<h2>Our Location</h2>
-					<address>
-					<strong>Revival Records</strong><br/>
-						128 South Barstow Street<br/>
-						Eau Claire, Wisconsin<br/>
-						54701<br/>
-						<abbr>Phone:</abbr> 715-514-4202
-				   </address>
-				  </div>
-				<div id="map-container" class="col-lg-8 col-md-8 col-sm-12 col-xs-12"></div>
-			  </div><!-- /map-outer -->
-			  
-			  <div class="col-lg-4 col-lg-offset-1 col-md-4 col-sm-12 col-xs-12 rowTextCentered main-content">
-					<h2>Store Hours</h2>
-					Monday: 11:00AM - 7:00PM<br/>
-					Tuesday: 11:00AM - 7:00PM<br/>
-					Wednesday: 11:00AM - 7:00PM<br/>
-					Thursday: 11:00AM - 7:00PM<br/>
-					Friday: 11:00AM - 7:00PM<br/>
-					Saturday: 11:00AM - 7:00PM<br/>
-					Sunday: closed<br/>
-			  </div>
-		  </div> <!-- /row -->
 		</div>
     </body>
 </html>

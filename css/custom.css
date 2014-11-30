@@ -47,8 +47,8 @@ div#thumbnail.polaroid_imgs a img {
 
 .main-content {
   padding:25px;
-  background-color:white;
-  margin-bottom:50px;
+  background-color: white;
+  margin-bottom: 50px;
   border-radius: 25px;
 }
 
@@ -83,6 +83,7 @@ footer {
 }
 
 #map-container {
+	margin-top: 20px;
 	height: 400px;
 }
 .pointer:hover{
@@ -185,6 +186,10 @@ footer {
   }
 }
 
+.polaroid_imgs{
+  	 margin-top: 75px;
+	 
+}
 
 .polaroid_imgs a {
 	background: white;
@@ -265,7 +270,6 @@ a:hover {
   text-decoration: underline;
 }
 
-h2 { padding-top: 20px; }
 h2:first-of-type { padding-top: 0; }
 ul { padding: 0; }
 
@@ -374,4 +378,63 @@ ul { padding: 0; }
   color: #999999;
   background-color: #fff;
   cursor: default;
+}
+
+/*****ABOUT PAGE STYLE*****/
+.scrollable{
+	max-height: 450px;
+	overflow-y: scroll;	
+}
+
+.content-header{ 
+	font-family: "Bernard MT Condensed";
+	font-size: 25px;
+	color: #D40A0A;
+}
+
+.content-large-header{
+	font-family: "Bernard MT Condensed";
+	font-size: 35px;
+	color: #D40A0A;
+}
+
+.about-btn-style{
+	border: none;
+	font-size : 25px;
+	color : #6B6B6B;
+	padding : 1px 10px;
+	background-color : #fcfcfc;
+	font-family: "Bernard MT Condensed";
+}
+
+#store-button{
+	color: #D40A0A;	
+}
+
+input[type="button"]:hover{
+	color: #D40A0A;	
+}
+
+.about-btn-style:hover {
+	background-color: #fcfcfc;
+	color: #D40A0A;
+}
+
+.about-btn-style:focus, .about-btn-style:active{
+	color: 	#D40A0A;
+	border-color: none;
+	outline: none;
+}
+
+/*****CONTACT PAGE STYLES*****/
+.small-text-muted{
+	font-size: 18px;
+	margin-top: 0px;	
+	padding-top: 0px;
+}
+
+.no-margin{
+	margin: 0px;
+	margin-top: 10px;
+	padding: 0px;
 }
