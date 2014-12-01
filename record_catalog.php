@@ -85,24 +85,75 @@
 				<tr>
 					<td>
 					<div  data-toggle="modal" data-target="#myModal" id="requestRecord" style="width:80px;height:80px;">
-							
 						 User Login<img src="img/recordcatalogicon.jpg" alt="" width="80" height="80" border="1"></a>
 					</div>
 					</td>
 				</tr>
-				<tr>
-					<td>Example Record 1<img src="img/requestrecord.jpg" alt="" width="80" height="80" border="1"></a></td>
-					<td>Example Record 2<img src="img/requestrecord.jpg" alt="" width="80" height="80" border="1"></a></td>
-					<td>Example Record 3<img src="img/requestrecord.jpg" alt="" width="80" height="80" border="1"></a></td>					
-				</tr>
-				<tr>
-					<td>Example Record 4<img src="img/requestrecord.jpg" alt="" width="80" height="80" border="1"></a></td>
-					<td>Example Record 5<img src="img/requestrecord.jpg" alt="" width="80" height="80" border="1"></a></td>
-					<td>Example Record 6<img src="img/requestrecord.jpg" alt="" width="80" height="80" border="1"></a></td>
-				</tr>
+    				<?php
+                	$servername = "68.178.217.19";
+        			$username = "revivalrecordsdb";
+        			$password = "RevivalRecords123!";
+        			$dbname = "revivalrecordsdb";
+                    
+                    $conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
+                    $db_selected = mysql_select_db($dbname, $conn);  if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
+                    
+                    $result = mysql_query("SELECT * FROM Record"); 
+                    
+                    while($row = mysql_fetch_array($result)) 
+                      {  
+                      ?>
+                      <tr>
+                        <img src="img/recordcatalogicon.jpg" onclick ="insertRow();" alt="" width="80" height="80" border="1"><?php echo $row['record_name'];?> <br>
+                      </tr>
+                       <?php
+                       }
+        			mysql_close($conn);
+        	        ?> 
 			</table>
 		</div>
-		
+        <?php
+            function insertRow($name){
+                $servername = "68.178.217.19";
+            	$username = "revivalrecordsdb";
+        		$password = "RevivalRecords123!";
+        		$dbname = "revivalrecordsdb";
+                
+                $conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
+                $db_selected = mysql_select_db($dbname, $conn);  if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
+                
+            
+                $name = $_POST["name"];
+                $email = $_POST["email"];
+                $phone = $_POST["phone"];
+                $record = $_POST["record"];
+                $request_first = $_POST["firstName"];
+                $request_last = $_POST["lastName"];
+                $current_date = date("Y-m-d H:i:s");
+                $record_id = $_POST["recordID"];
+                
+    			$sql = mysql_query("INSERT INTO Record_Request (record_id, request_email, request_phone, request_record, request_first, request_last, request_date)
+    			VALUES ('$record_id', '$email', '$phone', null, '$request_first', '$request_last', '$current_date')");
+    			if ($sql) {
+    				echo "New record created successfully";
+    			} else {
+    				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    			}
+    			mysqli_close($conn);
+                }
+        ?>
+		<script>
+           /*function insertRow(){
+             $.ajax({
+                type: "POST",
+                url: "my_records.php",
+                data: { name: $("select[name='record_name']").val()},
+                success:function( msg ) {
+                 alert( "Row Inserted: " + msg );
+                }
+               });
+          }*/
+        </script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
