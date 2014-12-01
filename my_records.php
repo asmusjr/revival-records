@@ -18,38 +18,6 @@
 	<body>
 		<?php include 'header-footer.php' ?>
 		
-		    <?php
-		/*function postRecordRequest(){
-            echo "buttstick";
-			$servername = "68.178.217.19";
-			$username = "revivalrecordsdb";
-			$password = "RevivalRecords123!";
-			$dbname = "revivalrecordsdb";
-            
-            $conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
-            $db_selected = mysql_select_db($dbname, $conn);  if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
-            
-            $name = $_POST["name"];
-            $email = $_POST["email"];
-            $phone = $_POST["phone"];
-            $record = $_POST["record"];
-            $request_first = $_POST["firstName"];
-            $request_last = $_POST["lastName"];
-            $current_date = date("Y-m-d H:i:s");
-            $record_id = $_POST["recordID"];
-            // run a query to get records and populate dropdown with existing records to assign request_record in below query
-			$sql = mysql_query("INSERT INTO Record_Request (record_id, request_email, request_phone, request_record, request_first, request_last, request_date)
-			VALUES ('$record_id', '$email', '$phone', null, '$request_first', '$request_last', '$current_date')");
-			if ($sql) {
-				echo "New record created successfully";
-			} else {
-				echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-			}
-			mysqli_close($conn);
-			echo "DONE JEAH";
-		}*/
-	?>
-		
 		
 		
 		<div class = "recordsTitle" align="center">
@@ -90,18 +58,7 @@
 		
 		<div class = "container main-content">
 			<table cellpadding="0" width="100%" cellspacing="0" style = "font-size: 16px">
-			<tr>
-				<td >User Record 1<img src="img/recordcatalogicon.jpg" alt="" width="80" height="80" border="1"></a></td>
-				<td >User Record 2<img src="img/recordcatalogicon.jpg" alt="" width="80" height="80" border="1"></a></td>
-				<td >User Record 3<img src="img/recordcatalogicon.jpg" alt="" width="80" height="80" border="1"></a></td>
-				
-			</tr>
-			<tr>
-				<td >User Record 4<img src="img/recordcatalogicon.jpg" alt="" width="80" height="80" border="1"></a></td>
-				<td >User Record 5<img src="img/recordcatalogicon.jpg" alt="" width="80" height="80" border="1"></a></td>
-				<td >User Record 6<img src="img/recordcatalogicon.jpg" alt="" width="80" height="80" border="1"></a></td>
-				
-			</tr>
+
 		</table>
 		
 		</div>
