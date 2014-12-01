@@ -22,14 +22,13 @@
 				<li><a href="my_records.php">My Records</a></li>
 			  </ul>
 			</li>
-			</ul>
+		  </ul>
 		</div>
 	  </div>
 	</div>
 
 	<nav class="navbar navbar-fixed-bottom" role="navigation">
-		<?php include 'music-player.php' ?>
-		<footer>
+		<footer class="navbar-inverse">
 			<div class="container">
 				<p class="pull-right"><a href="contact.php">715-514-4202 &middot; 128 S. Barstow St &middot; Eau Claire</a></p>
 				<p>

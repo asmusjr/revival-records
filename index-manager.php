@@ -10,11 +10,11 @@
 
 			fclose($file);
 		} else {
-			echo "Welcome."
+			echo "Welcome.";
 		}
 		
 		echo "<br>";
-		include 'index/title-3.txt';
+		include "index/title-3.txt";
 ?>
 
 <form action="index-manager.php" method="post">
