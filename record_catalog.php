@@ -3,18 +3,23 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Revival Records - Eau Claire Records</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="stylesheet" href="css/master.css">
-		 <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    	<script type="text/javascript" src="js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
-    </head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Revival Records - Eau Claire Records</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="css/master.css">
+        
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    	<script src="js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
+	</head>
 	<body>
 		<?php include 'header-footer.php' ?>
 		
@@ -78,70 +83,40 @@
 				</div>
 			</div>
 			<div class="row">
-			<div class="col-xs-12 main-content">
-			<div class="bs-docs-section">
-			<div class="bs-glyphicons">
-    <ul class="bs-glyphicons-list">
-        <li id="A">
-			<ul class="media-list">
-				<li class="media">
-					<a class="media-left" href="#">
-						<img src="img/record.png" width="50px" alt="...">
-						<a href="#"><span class="glyphicon glyphicon-plus"></span></a>
-					</a>
-				</li>
-				<p>Taylor Swift</p>
-				<p>1989</p>
-				<p>Pop</p>
-			</ul>
-		</li>
-		
-		<?php
-                	$servername = "68.178.217.19";
-        			$username = "revivalrecordsdb";
-        			$password = "RevivalRecords123!";
-        			$dbname = "revivalrecordsdb";
-                    
-                    $conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
-                    $db_selected = mysql_select_db($dbname, $conn);  if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
-                    
-                    $result = mysql_query("SELECT * FROM Record"); 
-                    
-                    while($row = mysql_fetch_array($result)) {  ?>
-					  
-						<li>
-							<ul class="media-list">
-								<li class="media">
-									<a class="media-left" href="#">
-										<img src="img/record.png" width="50px" alt="...">
-										<a href="#"><span class="glyphicon glyphicon-plus"></span></a>
-									</a>
-								</li>
-								<p>Artist</p>
-								<p><?php echo $row['record_name'];?></p>
-								<p>Genre</p>
-							</ul>
-						</li>
-					  
-                       <?php
-                       }
-        			mysql_close($conn);
-        	        ?>
-    </ul>
-  </div>
-			</div>
-			</div>
-			<div class="row">
 				<div class="col-xs-12 main-content">
-				<table cellpadding="0" width="100%" cellspacing="0" style = "font-size: 16px">
-				<tr>
-					<td>
-					<div  data-toggle="modal" data-target="#myModal" id="requestRecord" style="width:80px;height:80px;">
-						 User Login<img src="img/recordcatalogicon.jpg" alt="" width="80" height="80" border="1"></a>
+					<div class="bs-glyphicons">
+						<ul class="bs-glyphicons-list">
+						<?php
+							$servername = "68.178.217.19";
+							$username = "revivalrecordsdb";
+							$password = "RevivalRecords123!";
+							$dbname = "revivalrecordsdb";
+							
+							$conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
+							$db_selected = mysql_select_db($dbname, $conn);  if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
+							
+							$result = mysql_query("SELECT * FROM Record"); 
+							
+							while($row = mysql_fetch_array($result)) {  //while loop is closed in next php tag ?>
+							<li>
+								<ul class="media-list">
+									<a href="#" style="display:block">
+										<li class="media">
+											<img src="img/record.png" width="50px">
+											<span class="glyphicon glyphicon-plus"></span> ADD
+										</li>
+									</a>
+									<p>Artist</p>
+									<p><?php echo $row['record_name'];?></p>
+									<p>Genre</p>
+								</ul>
+							</li>
+                       <?php } //end of while loop
+						mysql_close($conn); ?>
+						</ul>
 					</div>
-					</td>
-				</tr>
-			</table>
+				</div>
+			</div>
 		</div>
         <?php
             function insertRow($name){

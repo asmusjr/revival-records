@@ -79,6 +79,10 @@ body #background{
 	}
 }
 
+.record-add {
+	background-color:white;
+}
+
 /* --------------------- */
 
 div#thumbnail.polaroid_imgs a img {
