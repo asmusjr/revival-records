@@ -100,30 +100,46 @@ div#thumbnail.polaroid_imgs a img {
 }
 
 .navbar-custom {
-  margin-top:12px;
-  margin-bottom:25px;
-  border-top:1px solid #d52623;
-  border-bottom:2px solid #d52623;
+	margin-top:12px;
+	margin-bottom:25px;
+	border-top:1px solid #d52623;
+	border-bottom:2px solid #d52623;
 }
 
 #navbar-image {
-  max-width:180px;
-  margin-top:-30px;
+	max-width:180px;
+	margin-top:-30px;
+	-webkit-transition: max-width 1s; /* For Safari 3.1 to 6.0 */
+	transition: max-width 1s;
+}
+
+#navbar-image:hover {
+	max-width:300px;
+}
+
+.help {
+	background-color:grey !important;
+	height:90px !important;
+}
+
+.all-content {
+	padding-bottom:30px;
 }
 
 .main-content {
-  padding:10px 5px 10px 10px;
-  margin-bottom:15px;
+	margin-top:10px;
+	padding:10px 5px 25px 5px;
+	margin-bottom:10px;
 
-  background-color:white;
+	background-color:white;
 
-  border-style:solid;
-  border-width:4px;
-  border-radius:25px;
+	border-style:solid;
+	border-width:4px;
+	border-radius:25px;
 
-  /* border: 5px solid transparent;
-  border-image-source: url(../img/stripes.png);
-  border-image-slice: 20; */
+	/* border: 5px solid transparent;
+	border-image-source: url(../img/stripes.png);
+	border-image-slice: 20; */
 }
 
 .record-link {

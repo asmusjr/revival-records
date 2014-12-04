@@ -35,7 +35,7 @@
 					<a href="https://www.facebook.com/pages/Revival-Records/111980655498485" target="_blank"><img src="img/facebook-icon.png" class="social-media-icon" alt="Like our Facebook Fan Page"></a>
 					<a href="https://twitter.com/RevivalRcrds" target="_blank"><img src="img/twitter-icon.png" class="social-media-icon" alt="Follow us on Twitter"></a>
 				</p>
-			</div><!-- /.container -->
+			</div>
 		</footer>
 	</nav>
 	

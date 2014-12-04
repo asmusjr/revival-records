@@ -22,15 +22,13 @@
 	</head>
 	<body>
 		<?php include 'header-footer.php' ?>
-		
-		<div class="container">
+		<div class="container all-content">
 			<div class="row">
 				<div class="main-content col-md-10">
 					<h2 class="content-large-header">Record <span class="text-muted">Catalog</span></h2>
 					<p>Welcome to the record catalog section of Revival Records. Here, you can view...</p>
 					<p>To learn about how we get our records, see about ...</p>
-					<p>To request records to pick up the store ... then go to ... </p>
-					
+					<p>To request records to pick up the store ... then go to ...</p>
 					<hr/>
 					<ul class="nav nav-pills" role="tablist">
 					  <li role="presentation" class="active"><a href="#">Sort by Artist</a></li>
@@ -53,32 +51,32 @@
 			<div class="row">
 				<div class="col-xs-12 text-center">
 					<ul class="pagination">
-						<li class="active"><a href="#A">A</a></li>
-						<li><a href="#B">B</a></li>
-						<li><a href="#C">C</a></li>
-						<li><a href="#D">D</a></li>
-						<li><a href="#">E</a></li>
-						<li><a href="#">F</a></li>
-						<li><a href="#">G</a></li>
-						<li><a href="#">H</a></li>
-						<li><a href="#">I</a></li>
-						<li><a href="#">J</a></li>
-						<li><a href="#">K</a></li>
-						<li><a href="#">L</a></li>
-						<li><a href="#">M</a></li>
-						<li><a href="#">N</a></li>
-						<li><a href="#">O</a></li>
-						<li><a href="#">P</a></li>
-						<li><a href="#">Q</a></li>
-						<li><a href="#">R</a></li>
-						<li><a href="#">S</a></li>
-						<li><a href="#">T</a></li>
-						<li><a href="#">U</a></li>
-						<li><a href="#">V</a></li>
-						<li><a href="#">W</a></li>
-						<li><a href="#">X</a></li>
-						<li><a href="#">Y</a></li>
-						<li><a href="#">Z</a></li>
+						<li class="active"><a href="#a">A</a></li>
+						<li><a href="#b">B</a></li>
+						<li><a href="#c">C</a></li>
+						<li><a href="#d">D</a></li>
+						<li><a href="#e">E</a></li>
+						<li><a href="#f">F</a></li>
+						<li><a href="#g">G</a></li>
+						<li><a href="#h">H</a></li>
+						<li><a href="#i">I</a></li>
+						<li><a href="#j">J</a></li>
+						<li><a href="#k">K</a></li>
+						<li><a href="#l">L</a></li>
+						<li><a href="#m">M</a></li>
+						<li><a href="#n">N</a></li>
+						<li><a href="#o">O</a></li>
+						<li><a href="#p">P</a></li>
+						<li><a href="#q">Q</a></li>
+						<li><a href="#r">R</a></li>
+						<li><a href="#s">S</a></li>
+						<li><a href="#t">T</a></li>
+						<li><a href="#u">U</a></li>
+						<li><a href="#v">V</a></li>
+						<li><a href="#w">W</a></li>
+						<li><a href="#x">X</a></li>
+						<li><a href="#y">Y</a></li>
+						<li><a href="#z">Z</a></li>
 					</ul>
 				</div>
 			</div>
@@ -101,7 +99,7 @@
 							<li>
 								<ul class="media-list">
 									<a href="#" style="display:block">
-										<li class="media">
+										<li class="media help">
 											<img src="img/record.png" width="50px">
 											<span class="glyphicon glyphicon-plus"></span> ADD
 										</li>
@@ -160,8 +158,5 @@
                });
           }*/
         </script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
     </body>
 </html>

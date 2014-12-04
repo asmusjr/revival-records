@@ -20,45 +20,30 @@
         <script src="js/main.js"></script>
     	<script src="js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
 		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-		<script>
-			function init_map() {
-				var var_location = new google.maps.LatLng(44.8119074,-91.5003962);
-				var var_mapoptions = {
-				  center: var_location,
-				  zoom: 14
-				};
-				var var_marker = new google.maps.Marker({position: var_location,map: var_map,title:"Revival Records"});
-				var var_map = new google.maps.Map(document.getElementById("map-container"),var_mapoptions);
-				var_marker.setMap(var_map);	
-			  }
-			  google.maps.event.addDomListener(window, 'load', init_map);
-		</script>
+		<script src="js/contact.js"></script>
     </head>
 	<body>
 		<?php include 'header-footer.php' ?>
-		<div class="container">
-			<div class="row">
-				<div class="featurette">
-					<div class="col-md-12 main-content">
-                    	<div class="col-md-4">
-                            <h2 class="content-large-header">Contact <span class="text-muted">Revival Records</span></h2>
-                            <h4 class="text-muted">Explore our record collection today.</h4>
-                           	<br />
-                            <h4 class="text-muted no-margin">Call us</h4>
-                            <span class="lead small-text-muted">715-514-4202</span>
-                            <h4 class="text-muted no-margin">Email us</h4>
-                            <span class="lead small-text-muted">billy@revivalrecords.co</span>
-                            <h4 class="text-muted no-margin">Visit us</h4>
-                            <span class="lead small-text-muted">
-                            						128 S. Barstow St.<br/>
-                                                    Eau Claire, Wisconsin<br/>
-                                                    54701<br/></span>
-                            <br/>
-                            <span class="lead small-text-muted">Open Monday through Saturday <br/> 11AM - 7PM.<br/>
-                                            				Closed Sundays.</span>
-                        </div>
-                       	<div id="map-container" class="col-lg-8 col-md-8 col-sm-12 col-xs-12"></div>
-					</div>
+		<div class="container all-content">
+			<div class="row main-content">
+				<div class="col-md-4">
+					<h2 class="content-large-header">Contact <span class="text-muted">Revival Records</span></h2>
+					<h4 class="text-muted">Explore our record collection today.</h4>
+					<hr/>
+					<h4 class="text-muted no-margin">Call us</h4>
+					<p class="lead small-text-muted">715-514-4202</p>
+					<h4 class="text-muted no-margin">Email us</h4>
+					<p class="lead small-text-muted">billy@revivalrecords.co</p>
+					<h4 class="text-muted no-margin">Visit us</h4>
+					<p class="lead small-text-muted">
+						128 S. Barstow St.<br/>
+						Eau Claire, Wisconsin<br/>
+						54701</p>
+					<p class="lead small-text-muted">
+						Open Monday through Saturday <br/> 11AM - 7PM.<br/>
+						Closed Sundays.</p>
+				</div>
+				<div class="col-md-8" id="map-container">
 				</div>
 			</div>
 		</div>
