@@ -122,10 +122,25 @@ div#thumbnail.polaroid_imgs a img {
   border-image-slice: 20; */
 }
 
-.active-record-link {
+.record-link {
+	border:2px solid grey;
+	border-radius:25px;
+}
+
+.record-link:hover{
+	border:2px solid red;
+}
+
+.record-link-active {
 	border:3px solid black;
 	border-radius:25px;
 }
+
+.record-link-active:hover {
+	border:3px solid red;
+}
+
+
 
 footer {
   position: absolute;

@@ -35,12 +35,12 @@
 				<div class="col-md-2 text-center">
 					<div class="row">
 						<div class="col-xs-12">
-							<p><a href="record_catalog.php"><img class="active-record-link" src="img/recordcatalogicon.jpg"/></a></p>
+							<p><a href="record_catalog.php"><img class="record-link-active" src="img/recordcatalogicon.jpg"/></a></p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
-							<p><a href="my_records.php"><img src="img/requestrecord.jpg"/></a></p>
+							<p><a href="my_records.php"><img class="record-link" src="img/requestrecord.jpg"/></a></p>
 						</div>
 					</div>
 				</div>
@@ -78,24 +78,11 @@
 				</div>
 			</div>
 			<div class="row">
-			<div class="col-xs-12">
+			<div class="col-xs-12 main-content">
 			<div class="bs-docs-section">
 			<div class="bs-glyphicons">
     <ul class="bs-glyphicons-list">
-      
         <li id="A">
-		  
-		  <div class="thumbnail">
-      <img src="img/record.png" width="75px" alt="...">
-      <div class="caption">
-        <p>Label</p>
-		</div>
-    </div>
-        <p><button class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-plus"></span></button></p>
-		  
-        </li>
-      
-        <li>
 			<ul class="media-list">
 				<li class="media">
 					<a class="media-left" href="#">
@@ -108,76 +95,38 @@
 				<p>Pop</p>
 			</ul>
 		</li>
-      
-        <li>
-          <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-euro</span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-minus</span>
-        </li>
-      
-        <li id="B">
-          <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-cloud</span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-envelope</span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-pencil</span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-glass</span>
-        </li>
-      
-        <li id="C">
-          <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-music</span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-search</span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-heart</span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-star</span>
-        </li>
-      
-        <li id="D">
-          <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-star-empty</span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-user</span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-film</span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
-          <span class="glyphicon-class">glyphicon glyphicon-th-large</span>
-        </li>
+		
+		<?php
+                	$servername = "68.178.217.19";
+        			$username = "revivalrecordsdb";
+        			$password = "RevivalRecords123!";
+        			$dbname = "revivalrecordsdb";
+                    
+                    $conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
+                    $db_selected = mysql_select_db($dbname, $conn);  if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
+                    
+                    $result = mysql_query("SELECT * FROM Record"); 
+                    
+                    while($row = mysql_fetch_array($result)) {  ?>
+					  
+						<li>
+							<ul class="media-list">
+								<li class="media">
+									<a class="media-left" href="#">
+										<img src="img/record.png" width="50px" alt="...">
+										<a href="#"><span class="glyphicon glyphicon-plus"></span></a>
+									</a>
+								</li>
+								<p>Artist</p>
+								<p><?php echo $row['record_name'];?></p>
+								<p>Genre</p>
+							</ul>
+						</li>
+					  
+                       <?php
+                       }
+        			mysql_close($conn);
+        	        ?>
     </ul>
   </div>
 			</div>
@@ -192,27 +141,6 @@
 					</div>
 					</td>
 				</tr>
-    				<?php
-                	$servername = "68.178.217.19";
-        			$username = "revivalrecordsdb";
-        			$password = "RevivalRecords123!";
-        			$dbname = "revivalrecordsdb";
-                    
-                    $conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
-                    $db_selected = mysql_select_db($dbname, $conn);  if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
-                    
-                    $result = mysql_query("SELECT * FROM Record"); 
-                    
-                    while($row = mysql_fetch_array($result)) 
-                      {  
-                      ?>
-                      <tr>
-                        <img src="img/recordcatalogicon.jpg" onclick ="insertRow();" alt="" width="80" height="80" border="1"><?php echo $row['record_name'];?> <br>
-                      </tr>
-                       <?php
-                       }
-        			mysql_close($conn);
-        	        ?> 
 			</table>
 		</div>
         <?php
