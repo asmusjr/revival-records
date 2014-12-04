@@ -19,6 +19,68 @@ body #background{
     z-index: 1;
 }
 
+/* overriding Bootstrap */
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+
+.bs-glyphicons{
+	margin:0 -10px 20px;
+	overflow:hidden;
+}
+.bs-glyphicons-list{
+	padding-left:0;
+	list-style:none;
+}
+.bs-glyphicons li{
+	float:left;
+	width:25%;
+	height:115px;
+	padding:10px;
+	font-size:10px;
+	line-height:1.4;
+	text-align:center;
+	background-color:#f9f9f9;
+	border:1px solid #fff;
+}
+.bs-glyphicons .glyphicon{
+	margin-top:5px;
+	margin-bottom:10px;
+	/*font-size:24px;*/
+}
+
+.bs-glyphicons li:hover{
+	color:#fff;
+	background-color:#563d7c;
+}
+@media (min-width:768px){
+	.bs-glyphicons{
+		margin-right:0;
+		margin-left:0
+	}
+/*
+	.bs-glyphicons li{
+		width:12.5%;
+		font-size:12px;
+	}
+*/
+}
+@media (max-width:768px){
+	.bs-glyphicons li{
+		width:50%;
+		font-size:12px;
+	}
+}
+
+/* --------------------- */
+
 div#thumbnail.polaroid_imgs a img {
     border: none;
 	max-height: 351px;
@@ -46,16 +108,23 @@ div#thumbnail.polaroid_imgs a img {
 }
 
 .main-content {
-  padding:25px;
-  border-style:solid;
-  border-width:10px;
+  padding:10px 5px 10px 10px;
+  margin-bottom:15px;
 
-  border: 5px solid transparent;
-  /*border-image-source: url(../img/stripes.png);*/
-  border-image-slice: 20;
   background-color:white;
-  margin-bottom: 50px;
-  border-radius: 25px;
+
+  border-style:solid;
+  border-width:4px;
+  border-radius:25px;
+
+  /* border: 5px solid transparent;
+  border-image-source: url(../img/stripes.png);
+  border-image-slice: 20; */
+}
+
+.active-record-link {
+	border:3px solid black;
+	border-radius:25px;
 }
 
 footer {
@@ -394,24 +463,24 @@ ul { padding: 0; }
 }
 
 /*****ABOUT PAGE STYLE*****/
-.scrollable{
+.scrollable {
 	max-height: 450px;
 	overflow-y: scroll;	
 }
 
-.content-header{ 
+.content-header { 
 	font-family: "Bernard MT Condensed";
 	font-size: 25px;
 	color: #D40A0A;
 }
 
-.content-large-header{
+.content-large-header {
 	font-family: "Bernard MT Condensed";
 	font-size: 35px;
 	color: #D40A0A;
 }
 
-.about-btn-style{
+.about-btn-style {
 	border: none;
 	font-size : 25px;
 	color : #6B6B6B;
