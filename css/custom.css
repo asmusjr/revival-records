@@ -51,7 +51,7 @@ div#thumbnail.polaroid_imgs a img {
   border-width:10px;
 
   border: 5px solid transparent;
-  border-image-source: url(../img/stripes.png);
+  /*border-image-source: url(../img/stripes.png);*/
   border-image-slice: 20;
   background-color:white;
   margin-bottom: 50px;
@@ -183,6 +183,13 @@ footer {
 
   .featurette-heading {
     font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-media-icon {
+	width:15px;
+	margin-top:0px;
   }
 }
 
