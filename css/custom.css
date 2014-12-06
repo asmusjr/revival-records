@@ -103,6 +103,97 @@ footer a:active {
   }
 }
 /* -------------------------------- */
+/*         POLAROID IMAGES          */
+/* -------------------------------- */
+#polaroid-background {
+    display:none;
+    position:fixed;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background:#000000;
+    z-index:1500; /* above navbar */
+}
+#polaroid-large {
+    display:none;
+    position:absolute;
+    background:#FFFFFF;
+    padding:5px;
+    z-index:1501;
+    color:#336699;
+	text-align:center;
+}
+@media (min-width: 768px) { 
+    .vertical-align {
+        display: flex;
+        align-items: center;
+    }
+}
+.polaroid_imgs img {
+    border:none;
+	max-height:351px;
+    max-width:351px;
+	display:block;
+	width:inherit;
+}
+.polaroid_imgs a {
+	background:white;
+	display:inline;
+	float:left;
+	margin:0 15px 30px;
+	padding:10px 5px 25px;
+	text-align:center;
+	text-decoration:none;
+	-webkit-box-shadow:0 4px 6px rgba(0, 0, 0, .3);
+	-moz-box-shadow:0 4px 6px rgba(0,0,0,.3);
+	box-shadow:0 4px 6px rgba(0,0,0,.3);
+	-webkit-transition:all .15s linear;
+	-moz-transition:all .15s linear;
+	transition:all .15s linear;
+	z-index:0;
+    position:relative;
+}
+.polaroid_imgs a:after {
+	color:#333;
+	font-size:20px;
+	content:attr(title);
+	position:relative;
+	top:15px;
+}
+.polaroid_imgs a:nth-child(2n) {
+	-webkit-transform:rotate(-8deg) translate(-50px, 10px);  
+	-moz-transform:rotate(-8deg) translate(-50px, 10px); 
+	transform:rotate(-8deg) translate(-50px, 10px);
+}
+.polaroid_imgs a:nth-child(3n) { 
+	-webkit-transform:rotate(-24deg);  
+	-moz-transform:rotate(-24deg); 
+	transform:rotate(-24deg); 
+}
+.polaroid_imgs a:nth-child(4n) {
+	-webkit-transform:rotate(14deg);  
+	-moz-transform:rotate(14deg); 
+	transform:rotate(14deg); 
+}
+.polaroid_imgs a:nth-child(5n) {
+	-webkit-transform:rotate(-18deg);  
+	-moz-transform:rotate(-18deg); 
+	transform:rotate(-18deg); 
+}
+.polaroid_imgs a:hover {
+	-webkit-transform:rotate(0deg); 
+	-moz-transform:rotate(0deg);
+	transform:rotate(0deg);
+	-webkit-transform:scale(1.2); 
+	-moz-transform:scale(1.2);
+	transform:scale(1.2);
+	z-index:10;
+	-webkit-box-shadow:0 10px 20px rgba(0, 0, 0, .7);
+	-moz-box-shadow:0 10px 20px rgba(0,0,0,.7);
+	box-shadow:0 10px 20px rgba(0,0,0,.7);
+}
+/* -------------------------------- */
 /*         RECORDS CATALOG          */
 /* -------------------------------- */
 .nav-pills > li {
@@ -116,6 +207,7 @@ footer a:active {
 }
 .records-list{
 	margin:0;
+	padding:0;
 	list-style:none;
 }
 .records-list li{
@@ -156,22 +248,6 @@ footer a:active {
 	background-color:grey !important;
 	height:90px !important;
 }
-
-/* --------------------- */
-
-div#thumbnail.polaroid_imgs a img {
-    border: none;
-	max-height: 351px;
-    max-width: 351px;
-}
-#large {
-    display: none;
-    position: absolute;
-    background: #FFFFFF;
-    padding: 5px;
-    z-index: 10;
-    color: #336699;
-}
 .record-link {
 	border:2px solid grey;
 	border-radius:25px;
@@ -189,192 +265,51 @@ div#thumbnail.polaroid_imgs a img {
 .record-link-active:hover {
 	border:3px solid red;
 }
-
-/*Embedded Google map*/
-
-#map-outer {  
-	height: 440px;
-	padding: 10px;
-	border: 2px solid #CCC;
-	background-color:white;
-}
-
-#map-container {
-	margin-top: 20px;
-	height: 400px;
-}
-.pointer:hover{
-	cursor:pointer;
-}	
-.rowTextCentered{
-	text-align:center;
-}
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
+/* -------------------------------- */
+/*            HOME PAGE             */
+/* -------------------------------- */
 .carousel {
-  border-radius: 25px;
-  height: 475px;
-  margin-bottom: 40px;
+  border-radius:25px;
+  height:475px;
+  margin-bottom:40px;
 }
-
-/* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  z-index: 10;
-  text-shadow: 0px 0px 15px #000000, 0px 0px 15px #000000, 0px 0px 15px #000000;
+  z-index:10;
+  text-shadow:0px 0px 15px #000000, 0px 0px 15px #000000, 0px 0px 15px #000000;
 }
-
-/* Declare heights because of positioning of img element */
 .carousel .item {
-  border-radius: 25px;
-  height: 475px;
-  background-color: #777;
+  border-radius:25px;
+  height:475px;
+  background-color:#777;
 }
 .carousel-inner > .item > img {
-  border-radius: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  border-radius:25px;
+  position:absolute;
+  top:0;
+  left:0;
   width:100%;
   /*min-width: 100%;*/
-  height: 475px;
+  height:475px;
 }
-
 .carousel-control {
-	border-radius: 25px;
+	border-radius:25px;
 }
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
+.carousel-indicators > li {
+	border:2px solid #d5281f;
 }
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-4 p {
+.marketing p {
   margin-right: 10px;
   margin-left: 10px;
 }
-
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
 @media (min-width: 768px) {
-  /* Bump up size of carousel content */
-  .carousel-caption p {
+  .carousel-caption p {   /* Bump up size of carousel content */
     margin-bottom: 20px;
     font-size: 21px;
     line-height: 1.4;
   }
-
-  .featurette-heading {
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
-  }
-}
-
-.polaroid_imgs{
-  	 margin-top: 75px;
-	 
-}
-
-.polaroid_imgs a {
-	background: white;
-	display: inline;
-	float: left;
-	margin: 0 15px 30px;
-	padding: 10px 5px 25px;
-	text-align: center;
-	text-decoration: none;
-	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-	-moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
-	box-shadow: 0 4px 6px rgba(0,0,0,.3);
-	-webkit-transition: all .15s linear;
-	-moz-transition: all .15s linear;
-	transition: all .15s linear;
-	z-index:0;
-    position:relative;
-}
-
-.polaroid_imgs a:after {
-	color: #333;
-	font-size: 20px;
-	content: attr(title);
-	position: relative;
-	top:15px;
-}
-
-.polaroid_imgs img { 
-	display: block; 
-	width: inherit; 
-}
-
-.polaroid_imgs a:nth-child(2n) {
-	-webkit-transform: rotate(-8deg) translate(-50px, 10px);  
-	-moz-transform: rotate(-8deg) translate(-50px, 10px); 
-	transform: rotate(-8deg) translate(-50px, 10px);
-}
-
-.polaroid_imgs a:nth-child(3n) { 
-	-webkit-transform: rotate(-24deg);  
-	-moz-transform: rotate(-24deg); 
-	transform: rotate(-24deg); 
-}
-.polaroid_imgs a:nth-child(4n) {
-	-webkit-transform: rotate(14deg);  
-	-moz-transform: rotate(14deg); 
-	transform: rotate(14deg); 
-}
-.polaroid_imgs a:nth-child(5n) {
-	-webkit-transform: rotate(-18deg);  
-	-moz-transform: rotate(-18deg); 
-	transform: rotate(-18deg); 
-}
-
-.polaroid_imgs a:hover {
-	-webkit-transform: rotate(0deg); 
-	-moz-transform: rotate(0deg);
-        transform: rotate(0deg);
-	-webkit-transform: scale(1.2); 
-	-moz-transform: scale(1.2);
-        transform: scale(1.2);
-	z-index:10;
-	-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-	-moz-box-shadow: 0 10px 20px rgba(0,0,0,.7);
-        box-shadow: 0 10px 20px rgba(0,0,0,.7);
 }
 
 h2:first-of-type { padding-top: 0; }
-ul { padding: 0; }
-
 .pagination {
   height: 36px;
   margin: 18px 0;
@@ -384,7 +319,6 @@ ul { padding: 0; }
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
-
   *zoom: 1;
   margin-left: 0;
   margin-bottom: 0;
@@ -432,111 +366,69 @@ ul { padding: 0; }
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-.pagination-centered {
-  text-align: center;
-}
-.pagination-right {
-  text-align: right;
-}
-.pager {
-  margin-left: 0;
-  margin-bottom: 18px;
-  list-style: none;
-  text-align: center;
-  *zoom: 1;
-}
-.pager:before,
-.pager:after {
-  display: table;
-  content: "";
-}
-.pager:after {
-  clear: both;
-}
-.pager li {
-  display: inline;
-}
-.pager a {
-  display: inline-block;
-  padding: 5px 14px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-}
-.pager a:hover {
-  text-decoration: none;
-  background-color: #f5f5f5;
-}
-.pager .next a {
-  float: right;
-}
-.pager .previous a {
-  float: left;
-}
-.pager .disabled a,
-.pager .disabled a:hover {
-  color: #999999;
-  background-color: #fff;
-  cursor: default;
-}
-
-/*****ABOUT PAGE STYLE*****/
+/* -------------------------------- */
+/*            ABOUT PAGE            */
+/* -------------------------------- */
 .scrollable {
-	max-height: 450px;
-	overflow-y: scroll;	
+	max-height:450px; /* use jQuery to alter this to fit page size dynamically? */
+	overflow-y:scroll;
 }
-
 .content-header { 
-	font-family: "Bernard MT Condensed";
-	font-size: 25px;
-	color: #D40A0A;
+	font-family:"Bernard MT Condensed";
+	font-size:25px;
+	color:#D40A0A;
 }
-
 .content-large-header {
-	font-family: "Bernard MT Condensed";
-	font-size: 35px;
-	color: #D40A0A;
+	font-family:"Bernard MT Condensed";
+	font-size:35px;
+	color:#D40A0A;
 }
-
-.about-btn-style {
-	border: none;
-	font-size : 25px;
-	color : #6B6B6B;
-	padding : 1px 10px;
-	background-color : #fcfcfc;
-	font-family: "Bernard MT Condensed";
-}
-
 #store-button{
-	color: #D40A0A;	
+	color:#D40A0A;	
 }
-
-input[type="button"]:hover{
-	color: #D40A0A;	
+.about-btn-style {
+	border:none;
+	font-size:25px;
+	color:#6B6B6B;
+	padding:1px 10px;
+	background-color:#fcfcfc;
+	font-family:"Bernard MT Condensed";
 }
-
 .about-btn-style:hover {
 	background-color: #fcfcfc;
 	color: #D40A0A;
 }
-
 .about-btn-style:focus, .about-btn-style:active{
 	color: 	#D40A0A;
 	border-color: none;
 	outline: none;
 }
-
-/*****CONTACT PAGE STYLES*****/
-.small-text-muted{
-	font-size: 18px;
-	margin-top: 0px;	
-	padding-top: 0px;
+/* -------------------------------- */
+/*           CONTACT PAGE           */
+/* -------------------------------- */
+.small-text-muted {
+	font-size:18px;
+	margin-top:0px;	
+	padding-top:0px;
 }
-
-.no-margin{
-	margin: 0px;
-	margin-top: 10px;
-	padding: 0px;
+.no-margin {
+	margin:10px 0 0 0;
+	padding:0;
+}
+/* Embedded Google map */
+#map-outer {
+	height:440px;
+	padding:10px;
+	border:2px solid #CCC;
+	background-color:white;
+}
+#map-container {
+	margin-top: 20px;
+	height: 400px;
+}
+.pointer:hover{
+	cursor:pointer;
+}
+.rowTextCentered{
+	text-align:center;
 }

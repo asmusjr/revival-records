@@ -1,32 +1,29 @@
 jQuery.fn.center = function () {
 	this.css("position","absolute");
-	this.css("top", ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + "px");
-	this.css("left", ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + "px");
+	this.css("top", ($(window).height() - this.height()) / 2+$(window).scrollTop() + "px");
+	this.css("left", ($(window).width() - this.width()) / 2+$(window).scrollLeft() + "px");
 	return this;
 }
 $(document).ready(function() {
-	$(".thumbnail img").click(function(e){
-		$("body #background").css({"opacity" : "0.7"})
+	$("#thumbnail img").click(function(e){
+		$("#polaroid-background").css({"opacity" : "0.7"})
 						.fadeIn("slow");
-		$("#large").html("<img src='"+$(this).parent().attr("href")+"' alt='"+$(this).attr("alt")+"' /><br/>"+$(this).attr("rel")+"")
+		$("body").css("overflow", "hidden");
+		$("#polaroid-large").html("<img src='"+$(this).parent().attr("href")+"' alt='"+$(this).attr("alt")+"' /><br/>"+$(this).attr("rel")+"")
 				   .center()
 				   .fadeIn("slow");
 		return false;
 	});
-	style="height:100px;"
 	$(document).keypress(function(e){
 		if(e.keyCode==27){
-			$("body #background").fadeOut("slow");
-			$("#large").fadeOut("slow");
+			$("#polaroid-background").fadeOut("slow");
+			$("#polaroid-large").fadeOut("slow");
 		}
 	});
-	$("body #background").click(function(){
-		$("body #background").fadeOut("slow");
-		$("#large").fadeOut("slow");
-	});
-	$("#large").click(function(){
-		$("body #background").fadeOut("slow");
-		$("#large").fadeOut("slow");
+	$("#polaroid-background, #polaroid-large").click(function(){
+		$("body").css("overflow", "visible");
+		$("#polaroid-background").fadeOut("slow");
+		$("#polaroid-large").fadeOut("slow");
 	});
 });
 function changeToRecordText(elem){

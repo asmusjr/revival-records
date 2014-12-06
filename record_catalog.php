@@ -94,7 +94,7 @@
 							
 							$result = mysql_query("SELECT * FROM Record"); 
 							
-							$counter = 0;
+							$counter = 0; // used just coloring effects
 							$offset = 0;
 							while($row = mysql_fetch_array($result)) {  //while loop is closed in next php tag
 						?>
