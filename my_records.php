@@ -23,8 +23,6 @@
 	<body>
 		<?php include 'header-footer.php' ?>
 		
-		
-		
 		<div class = "recordsTitle" align="center">
 			<h2 style="font-size: 36px; padding: 2px 25px">Wish<span class="text-muted">List</span></h2>
 		</div>

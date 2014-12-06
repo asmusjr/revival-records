@@ -24,7 +24,7 @@
 	<body>
 		<?php include 'header-footer.php' ?>
 		
-		<div class="container all-content">
+		<div class="container">
 			<div class="row">
 				<div class="col-md-4 main-content scrollable">
                 	<h2 class="content-large-header">About <span class="text-muted">the Store</span></h2>

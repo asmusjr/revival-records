@@ -24,7 +24,7 @@
     </head>
 	<body>
 		<?php include 'header-footer.php' ?>
-		<div class="container all-content">
+		<div class="container">
 			<div class="row main-content">
 				<div class="col-md-4">
 					<h2 class="content-large-header">Contact <span class="text-muted">Revival Records</span></h2>

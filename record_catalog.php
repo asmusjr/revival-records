@@ -22,7 +22,7 @@
 	</head>
 	<body>
 		<?php include 'header-footer.php' ?>
-		<div class="container all-content">
+		<div class="container">
 			<div class="row">
 				<div class="main-content col-md-10">
 					<h2 class="content-large-header">Record <span class="text-muted">Catalog</span></h2>
@@ -30,9 +30,9 @@
 					<p>To learn about how we get our records, see about ...</p>
 					<p>To request records to pick up the store ... then go to ...</p>
 					<hr/>
-					<ul class="nav nav-pills" role="tablist">
-					  <li role="presentation" class="active"><a href="#">Sort by Artist</a></li>
-					  <li role="presentation"><a href="#">Sort by Album</a></li>
+					<ul class="nav nav-pills text-center" role="tablist">
+						<li role="presentation" class="active"><a href="#">Sort by Artist</a></li>
+						<li role="presentation"><a href="#">Sort by Album</a></li>
 					</ul>
 				</div>
 				<div class="col-md-2 text-center">
@@ -82,8 +82,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12 main-content">
-					<div class="bs-glyphicons">
-						<ul class="bs-glyphicons-list">
+					<ul class="records-list">
 						<?php
 							$servername = "68.178.217.19";
 							$username = "revivalrecordsdb";
@@ -95,24 +94,28 @@
 							
 							$result = mysql_query("SELECT * FROM Record"); 
 							
-							while($row = mysql_fetch_array($result)) {  //while loop is closed in next php tag ?>
-							<li>
-								<ul class="media-list">
-									<a href="#" style="display:block">
-										<li class="media help">
-											<img src="img/record.png" width="50px">
-											<span class="glyphicon glyphicon-plus"></span> ADD
-										</li>
-									</a>
-									<p>Artist</p>
-									<p><?php echo $row['record_name'];?></p>
-									<p>Genre</p>
-								</ul>
-							</li>
-                       <?php } //end of while loop
+							$counter = 0;
+							$offset = 0;
+							while($row = mysql_fetch_array($result)) {  //while loop is closed in next php tag
+						?>
+						<li class="record-item-<?php echo ($counter%2 + $offset%2)%2 ?>">
+							<ul class="media-list">
+								<a href="#" style="display:block">
+									<li class="media add-record-box">
+										<img src="img/record.png" width="50px">
+										<span class="glyphicon glyphicon-plus"></span> ADD
+									</li>
+								</a>
+								<p>Artist <?php echo $counter ?></p>
+								<p><?php echo $row['record_name'];?></p>
+								<p>Genre</p>
+							</ul>
+						</li>
+						<?php ++$counter;
+							if($counter%4==0) ++$offset;
+						} //end of while loop
 						mysql_close($conn); ?>
-						</ul>
-					</div>
+					</ul>
 				</div>
 			</div>
 		</div>
