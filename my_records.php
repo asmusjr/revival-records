@@ -19,104 +19,86 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     	<script src="js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
-    </head>
+	</head>
 	<body>
 		<?php include 'header-footer.php' ?>
-		
-		<div class = "recordsTitle" align="center">
-			<h2 style="font-size: 36px; padding: 2px 25px">Wish<span class="text-muted">List</span></h2>
-		</div>
-		<div class = "catalog" align = "center">
-			<div class="pagination" >
-				<ul align = "center">
-					<li class="active"><a href="#">A</a></li>
-					<li><a href="#">B</a></li>
-					<li><a href="#">C</a></li>
-					<li><a href="#">D</a></li>
-					<li><a href="#">E</a></li>
-					<li><a href="#">F</a></li>
-					<li><a href="#">G</a></li>
-					<li><a href="#">H</a></li>
-					<li><a href="#">I</a></li>
-					<li><a href="#">J</a></li>
-					<li><a href="#">K</a></li>
-					<li><a href="#">L</a></li>
-					<li><a href="#">M</a></li>
-					<li><a href="#">N</a></li>
-					<li><a href="#">O</a></li>
-					<li><a href="#">P</a></li>
-					<li><a href="#">Q</a></li>
-					<li><a href="#">R</a></li>
-					<li><a href="#">S</a></li>
-					<li><a href="#">T</a></li>
-					<li><a href="#">U</a></li>
-					<li><a href="#">V</a></li>
-					<li><a href="#">W</a></li>
-					<li><a href="#">X</a></li>
-					<li><a href="#">Y</a></li>
-					<li><a href="#">Z</a></li>
-				</ul>
+		<div class="container">
+			<div class="row">
+				<div class="main-content col-md-10">
+					<h2 class="content-large-header"><span class="text-muted">My</span> Records</h2>
+					<p>Welcome to the records you have requested.</p>
+					<p>To learn about how we get our records, see about ...</p>
+					<p>To request records to pick up the store ... then go to ...</p>
+					<hr/>
+					<ul class="nav nav-pills text-center" role="tablist">
+						<li role="presentation" class="active"><a href="#">Sort by Artist</a></li>
+						<li role="presentation"><a href="#">Sort by Album</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2 text-center">
+					<div class="row">
+						<div class="col-xs-12">
+							<p><a href="record_catalog.php"><img class="record-link" src="img/recordcatalogicon.jpg"/></a></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p><a href="my_records.php"><img class="record-link-active" src="img/requestrecord.jpg"/></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<ul class="pagination">
+						<li class="active"><a href="#a">A</a></li>
+						<li><a href="#b">B</a></li>
+						<li><a href="#c">C</a></li>
+						<li><a href="#d">D</a></li>
+						<li><a href="#e">E</a></li>
+						<li><a href="#f">F</a></li>
+						<li><a href="#g">G</a></li>
+						<li><a href="#h">H</a></li>
+						<li><a href="#i">I</a></li>
+						<li><a href="#j">J</a></li>
+						<li><a href="#k">K</a></li>
+						<li><a href="#l">L</a></li>
+						<li><a href="#m">M</a></li>
+						<li><a href="#n">N</a></li>
+						<li><a href="#o">O</a></li>
+						<li><a href="#p">P</a></li>
+						<li><a href="#q">Q</a></li>
+						<li><a href="#r">R</a></li>
+						<li><a href="#s">S</a></li>
+						<li><a href="#t">T</a></li>
+						<li><a href="#u">U</a></li>
+						<li><a href="#v">V</a></li>
+						<li><a href="#w">W</a></li>
+						<li><a href="#x">X</a></li>
+						<li><a href="#y">Y</a></li>
+						<li><a href="#z">Z</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 main-content">
+					<ul class="records-list">
+						<li class="record-item-0">
+							<ul class="media-list">
+								<a href="#" style="display:block">
+									<li class="media add-record-box">
+										<img src="img/record.png" width="50px">
+										<p>REMOVE</p>
+									</li>
+								</a>
+								<p>Artist</p>
+								<p>Record Name</p>
+								<p>Genre</p>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		
-		<div class = "container main-content">
-			<table cellpadding="0" width="100%" cellspacing="0" style = "font-size: 16px">
-
-		</table>
-		
-		</div>
-		
-		<div class="row">
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pointer" data-toggle="modal" data-target="#myModal" style="width:100px;height:100px;background-image:url(img/requestrecord.jpg);margin-right:25%;margin-left:28%;">
-		
-	</div>
-			
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pointer" style="width:100px;height:100px;background-image:url(img/recordcatalogicon.jpg);">
-			
-	</div>
-</div>
-		
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Request a Record</h4>
-      </div>
-      <div class="modal-body">
-      
-      <form action="/webformmailer.php" method="post">
-      <input type="hidden" name="subject" value="Submission" />
-      <input type="hidden" name="redirect" value="records.php" />
-      <div class="form-group">
-    		<label for="inputFirstName">First Name</label>
-			<input type="text" name="First name" class="form-control" id="inputFirstName" placeholder="First Name">
-	  </div>
-      <div class="form-group">
-        	<label for="inputFirstName">Last Name</label>
-			<input type="text" name="Last name" class="form-control" id="inputFirstName" placeholder="First Name">
-	  </div>
-      <div class="form-group">
-			<label for="inputEmail">Email</label>
-			<input type="text" name="email" class="form-control" id="inputEmail" placeholder="Email">
-	  </div>
-      <div class="form-group">
-			<label for="inputRecord">Record</label>
-			<input type="text" name="Record" class="form-control" id="inputRecord" placeholder="Record">
-	  </div>
-      <div class="modal-footer">
-            <button type="button" class="btn btn-lg" data-dismiss="modal">Close</button>
-            <button type="submit" name="submit" class="btn btn-lg btn-primary">Submit Request</button>
-      </div>
-      <input type="hidden" name="form_order" value="alpha"/>
-      <input type="hidden" name="form_delivery" value="default"/> 
-      <input type="hidden" name="form_format" value="html"/>
-      </form>
-		      </div>
-    </div>
-  </div>
-</div>
-		
     </body>
 </html>
