@@ -42,6 +42,10 @@
 					<p class="lead small-text-muted">
 						Open Monday through Saturday <br/> 11AM - 7PM.<br/>
 						Closed Sundays.</p>
+					<h4 class="text-muted no-margin">Social Media</h4>
+					<p class="lead small-text-muted">
+						Like us on Facebook: <a href="https://www.facebook.com/pages/Revival-Records/111980655498485" target="_blank">Revival-Records</a><br/>
+						Follow us on Twitter: <a href="https://twitter.com/RevivalRcrds" target="_blank">@RevivalRcrds</a></p>
 				</div>
 				<div class="col-md-8" id="map-container">
 				</div>

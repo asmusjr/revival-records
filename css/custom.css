@@ -232,7 +232,7 @@ footer a:active {
 	background-color:#C2C2C2;
 }
 .record-item-1 {
-	background-color:#f9f9f9;
+	background-color:#EBEBEB;
 }
 .records-list li:hover{
 	color:#fff;
@@ -247,6 +247,9 @@ footer a:active {
 .add-record-box {
 	background-color:grey !important;
 	height:90px !important;
+}
+a:hover .add-record-box  {
+	background-color:black !important;
 }
 .record-link {
 	border:2px solid grey;

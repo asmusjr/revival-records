@@ -97,8 +97,9 @@
 							$counter = 0; // used just coloring effects
 							$offset = 0;
 							while($row = mysql_fetch_array($result)) {  //while loop is closed in next php tag
+								$id = strtolower($row['record_name'][0]); // s
 						?>
-						<li class="record-item-<?php echo ($counter%2 + $offset%2)%2 ?>">
+						<li id="<?php echo $id ?>" class="record-item-<?php echo ($counter%2 + $offset%2)%2 ?>">
 							<ul class="media-list">
 								<a href="#" style="display:block">
 									<li class="media add-record-box">
