@@ -14,7 +14,8 @@
 			</div>
 			<div id="top-nav" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.php">Admin Home</a></li>
+					<li><a href="admin.php">Admin Home</a></li>
+					<li><a href="index.php">Edit Index</a></li>
 					<li><a href="about.php">Edit About</a></li>
 					<li><a href="contact.php">Edit Contact</a></li>
 					<li><a href="record_catalog.php">Edit Records</a></li>
@@ -27,7 +28,7 @@
 <nav class="navbar navbar-fixed-bottom" role="navigation">
 	<footer class="navbar-default admin-footer">
 		<div class="container">
-			<p class="text-center">You are currently in the <u>administrative tools</u>. <a href="../index.php" target="_blank">Click here to return to the normal website.</a></p>
+			<p class="text-center">You are currently in the <u>administrative tools</u>. <a href="../index.php">Click here to return to the normal website.</a></p>
 		</div>
 	</footer>
 </nav>

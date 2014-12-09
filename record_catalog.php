@@ -43,9 +43,10 @@
 			<div class="row">
 				<div class="main-content col-md-10">
 					<h2 class="content-large-header">Record <span class="text-muted">Catalog</span></h2>
-					<p>Welcome to the record catalog section of Revival Records. Here, you can view...</p>
-					<p>To learn about how we get our records, see about ...</p>
-					<p>To request records to pick up the store ... then go to ...</p>
+					<p>Welcome to the record catalog section of Revival Records. Here, you can view our latest records at the store.</p>
+					<p>To learn about the records we offer at our store, see <a href="about.php">About Our Records</a>.</p>
+					<p>See a record you like? You can request records from the store.</p>
+					<p>Simply add them to your list (<a href="my_records.php">My Records</a>), where you can then submit the request for in-store pick-up.</p>
 					<hr/>
 					<ul class="nav nav-pills text-center" role="tablist">
 						<li role="presentation" <?php if($sorted_by_artist) echo "class='active'" ?>><a href="#" onclick="document.forms['sort-by-artist'].submit()";>Sort by Artist</a></li>
@@ -55,12 +56,12 @@
 				<div class="col-md-2 text-center">
 					<div class="row">
 						<div class="col-xs-12">
-							<p><a href="record_catalog.php"><img class="record-link-active" src="img/recordcatalogicon.jpg"/></a></p>
+							<p><a href="record_catalog.php"><button class="btn btn-danger btn-record"><img class="record-btn-image2" src="img/catalog-notext-icon.png"/><br/>Record Catalog</button></a></p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
-							<p><a href="my_records.php"><img class="record-link" src="img/requestrecord.jpg"/></a></p>
+							<p><a href="my_records.php"><button class="btn btn-default btn-record"><img class="record-btn-image" src="img/record.png"/><br/>My Records</button></a></p>
 						</div>
 					</div>
 				</div>

@@ -26,9 +26,10 @@
 			<div class="row">
 				<div class="main-content col-md-10">
 					<h2 class="content-large-header"><span class="text-muted">My</span> Records</h2>
-					<p>Welcome to the records you have requested.</p>
-					<p>To learn about how we get our records, see about ...</p>
-					<p>To request records to pick up the store ... then go to ...</p>
+					<p>Welcome to My Records! Here, you can see the records you have added to your list.</p>
+					<p>To learn about the records we offer at our store, see <a href="about.php">About Our Records</a>.</p>
+					<p>To add records to this list, navigate to the <a href="record_catalog.php">Records Catalog</a>.</p>
+					<p>Ready to send your request? Click the submission button for in-store pick-up.</p>
 					<hr/>
 					<ul class="nav nav-pills text-center" role="tablist">
 						<li role="presentation" class="active"><a href="#">Sort by Artist</a></li>
@@ -38,12 +39,14 @@
 				<div class="col-md-2 text-center">
 					<div class="row">
 						<div class="col-xs-12">
-							<p><a href="record_catalog.php"><img class="record-link" src="img/recordcatalogicon.jpg"/></a></p>
+							<p><a href="record_catalog.php"><button class="btn btn-default btn-record"><img class="record-btn-image2" src="img/catalog-notext-icon.png"/><br/>Record Catalog</button></a></p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
-							<p><a href="my_records.php"><img class="record-link-active" src="img/requestrecord.jpg"/></a></p>
+							<p><a href="my_records.php"><button class="btn btn-danger btn-record"><img class="record-btn-image" src="img/record.png"/><br/>My Records</button></a></p>
+							<button class="btn btn-sample" data-toggle="modal" data-target="#myModal" id="createRecord">Complete &<br/>Send Request</button>
+
 						</div>
 					</div>
 				</div>
