@@ -25,7 +25,7 @@
 	<body>
 		<?php include 'header-footer.php' ?>
 		<div class="container">
-			<div class="row main-content">
+			<div class="row main-content" id="left-side">
 				<div class="col-md-4">
 					<h2 class="content-large-header">Contact <span class="text-muted">Revival Records</span></h2>
 					<h4 class="text-muted">Explore our record collection today.</h4>
@@ -47,8 +47,7 @@
 						Like us on Facebook: <a href="https://www.facebook.com/pages/Revival-Records/111980655498485" target="_blank">Revival-Records</a><br/>
 						Follow us on Twitter: <a href="https://twitter.com/RevivalRcrds" target="_blank">@RevivalRcrds</a></p>
 				</div>
-				<div class="col-md-8" id="map-container">
-				</div>
+				<div class="col-md-8" id="map-container"></div>
 			</div>
 		</div>
     </body>

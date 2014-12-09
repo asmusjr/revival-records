@@ -418,16 +418,9 @@ h2:first-of-type { padding-top: 0; }
 	margin:10px 0 0 0;
 	padding:0;
 }
-/* Embedded Google map */
-#map-outer {
-	height:440px;
-	padding:10px;
-	border:2px solid #CCC;
-	background-color:white;
-}
-#map-container {
-	margin-top: 20px;
-	height: 400px;
+#map-container { /* embedded Google map */
+	margin:10px 0 10px 0;
+	/* height is set via jQuery in contact.js */
 }
 .pointer:hover{
 	cursor:pointer;
