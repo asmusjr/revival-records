@@ -390,10 +390,7 @@ h2:first-of-type { padding-top: 0; }
 /* -------------------------------- */
 /*            ABOUT PAGE            */
 /* -------------------------------- */
-.scrollable {
-	max-height:450px; /* use jQuery to alter this to fit page size dynamically? */
-	overflow-y:scroll;
-}
+
 .content-header { 
 	font-family:"Bernard MT Condensed";
 	font-size:25px;
