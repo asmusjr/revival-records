@@ -9,7 +9,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a data-toggle="modal" data-target="#animation-intro" class="navbar-brand" href="#">
-				<img id="navbar-image" src="img/logo.png" alt="Revival Records">
+					<img id="navbar-image" src="img/logo.png" alt="Revival Records">
 				</a>
 			</div>
 			<div id="top-nav" class="navbar-collapse collapse">

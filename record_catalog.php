@@ -29,7 +29,8 @@
 				if (isset($_POST['sort-by']) && $_POST['sort-by'] === 'album') {
 					$sort_by = "record_name";
 				}
-			} ?>
+			}
+			$sorted_by_artist = ($sort_by == "artist_name"); ?>
 
 		<form action="record_catalog.php" id="sort-by-artist" method="post">
 			<input type="hidden" name="sort-by" value="artist" /> 
@@ -37,7 +38,6 @@
 		<form action="record_catalog.php" id="sort-by-album" method="post">
 			<input type="hidden" name="sort-by" value="album" /> 
 		</form>
-
 		
 		<div class="container">
 			<div class="row">
@@ -48,8 +48,8 @@
 					<p>To request records to pick up the store ... then go to ...</p>
 					<hr/>
 					<ul class="nav nav-pills text-center" role="tablist">
-						<li role="presentation" <?php if($sort_by == 'artist_name') echo "class='active'" ?>><a href="#" onclick="document.forms['sort-by-artist'].submit()";>Sort by Artist</a></li>
-						<li role="presentation" <?php if($sort_by == 'record_name') echo "class='active'" ?>><a href="#" onclick="document.forms['sort-by-album'].submit();">Sort by Album</a></li>
+						<li role="presentation" <?php if($sorted_by_artist) echo "class='active'" ?>><a href="#" onclick="document.forms['sort-by-artist'].submit()";>Sort by Artist</a></li>
+						<li role="presentation" <?php if(!$sorted_by_artist) echo "class='active'" ?>><a href="#" onclick="document.forms['sort-by-album'].submit();">Sort by Album</a></li>
 					</ul>
 				</div>
 				<div class="col-md-2 text-center">
@@ -138,6 +138,8 @@
 								</a>
 								<p>Artist: <?php echo $row['artist_name'] ?></p>
 								<p>Album: <?php echo $row['record_name'] ?></p>
+								<p>Genre: <?php echo $row['genre'] ?></p>
+								<p>Year: <?php echo $row['record_year'] ?></p>
 							</ul>
 						</li>
 						<?php ++$counter;
