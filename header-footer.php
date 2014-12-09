@@ -17,7 +17,7 @@
 					<li><a href="index.php">Home</a></li>
 					<li><a href="about.php">About</a></li>
 					<li><a href="contact.php">Contact</a></li>
-					<li class="dropdown">
+					<li id="nav-records" class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Records <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="record_catalog.php">Records Catalog</a></li>
