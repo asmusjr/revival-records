@@ -15,7 +15,7 @@
 			<div id="top-nav" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="admin.php">Admin Home</a></li>
-					<li><a href="index.php">Edit Index</a></li>
+					<li><a href="index.php">Edit Home</a></li>
 					<li><a href="about.php">Edit About</a></li>
 					<li><a href="contact.php">Edit Contact</a></li>
 					<li><a href="record_catalog.php">Edit Records</a></li>

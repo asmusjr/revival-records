@@ -43,7 +43,7 @@
 								<div class="carousel-caption">
 									<h1>We've moved to a bigger store!</h1>
 									<p>We are now located at 128 S. Barstow St.</p>
-									<p><a class="btn btn-lg btn-danger" href="visit.html" role="button">Visit us</a></p>
+									<p><a class="btn btn-lg btn-danger" href="visit.php" role="button">Visit us</a></p>
 								</div>
 							</div>
 						</div>
