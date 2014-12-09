@@ -19,6 +19,18 @@ body {
 	/*border-image-source: url(../img/stripes.png);
 	border-image-slice: 20; */
 }
+a {
+	font-weight:bold;
+}
+a:visited,
+a:active {
+	color:black;
+    text-decoration:none;
+}
+a:hover {
+	color:grey;
+	text-decoration:none;
+}
 /* -------------------------------- */
 /*          TOP NAVIGATION          */
 /* -------------------------------- */
@@ -272,7 +284,31 @@ a:hover .add-record-box  {
 	border-radius:50px;
 	background-color:white;
 }
-
+.btn-record {
+	width:135px !important;
+	height:135px !important;
+}
+.btn-sample { 
+	color: #ffffff; 
+	background-color: #0D0C0D; 
+	border-color: #13121C; 
+	width:135px !important;
+}
+.btn-sample:hover, 
+.btn-sample:focus, 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  color: #ffffff; 
+  background-color: #756C6D; 
+  border-color: #13121C; 
+} 
+.record-btn-image{
+	width:83px;
+}
+.record-btn-image2{
+	width:83
+}
 .record-link:hover{
 	border:2px solid red;
 }
