@@ -22,6 +22,23 @@
 	</head>
 	<body>
 		<?php include 'header-footer.php' ?>
+
+		<?php
+			$sort_by = "artist_name";
+			if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+				if (isset($_POST['sort-by']) && $_POST['sort-by'] === 'album') {
+					$sort_by = "record_name";
+				}
+			} ?>
+
+		<form action="record_catalog.php" id="sort-by-artist" method="post">
+			<input type="hidden" name="sort-by" value="artist" /> 
+		</form>
+		<form action="record_catalog.php" id="sort-by-album" method="post">
+			<input type="hidden" name="sort-by" value="album" /> 
+		</form>
+
+		
 		<div class="container">
 			<div class="row">
 				<div class="main-content col-md-10">
@@ -31,8 +48,8 @@
 					<p>To request records to pick up the store ... then go to ...</p>
 					<hr/>
 					<ul class="nav nav-pills text-center" role="tablist">
-						<li role="presentation" class="active"><a href="#">Sort by Artist</a></li>
-						<li role="presentation"><a href="#">Sort by Album</a></li>
+						<li role="presentation" <?php if($sort_by == 'artist_name') echo "class='active'" ?>><a href="#" onclick="document.forms['sort-by-artist'].submit()";>Sort by Artist</a></li>
+						<li role="presentation" <?php if($sort_by == 'record_name') echo "class='active'" ?>><a href="#" onclick="document.forms['sort-by-album'].submit();">Sort by Album</a></li>
 					</ul>
 				</div>
 				<div class="col-md-2 text-center">
@@ -51,32 +68,32 @@
 			<div class="row">
 				<div class="col-xs-12 text-center">
 					<ul class="pagination">
-						<li class="active"><a href="#a">A</a></li>
-						<li><a href="#b">B</a></li>
-						<li><a href="#c">C</a></li>
-						<li><a href="#d">D</a></li>
-						<li><a href="#e">E</a></li>
-						<li><a href="#f">F</a></li>
-						<li><a href="#g">G</a></li>
-						<li><a href="#h">H</a></li>
-						<li><a href="#i">I</a></li>
-						<li><a href="#j">J</a></li>
-						<li><a href="#k">K</a></li>
-						<li><a href="#l">L</a></li>
-						<li><a href="#m">M</a></li>
-						<li><a href="#n">N</a></li>
-						<li><a href="#o">O</a></li>
-						<li><a href="#p">P</a></li>
-						<li><a href="#q">Q</a></li>
-						<li><a href="#r">R</a></li>
-						<li><a href="#s">S</a></li>
-						<li><a href="#t">T</a></li>
-						<li><a href="#u">U</a></li>
-						<li><a href="#v">V</a></li>
-						<li><a href="#w">W</a></li>
-						<li><a href="#x">X</a></li>
-						<li><a href="#y">Y</a></li>
-						<li><a href="#z">Z</a></li>
+						<li><a href="#A">A</a></li>
+						<li><a href="#B">B</a></li>
+						<li><a href="#C">C</a></li>
+						<li><a href="#D">D</a></li>
+						<li><a href="#E">E</a></li>
+						<li><a href="#F">F</a></li>
+						<li><a href="#G">G</a></li>
+						<li><a href="#H">H</a></li>
+						<li><a href="#I">I</a></li>
+						<li><a href="#J">J</a></li>
+						<li><a href="#K">K</a></li>
+						<li><a href="#L">L</a></li>
+						<li><a href="#M">M</a></li>
+						<li><a href="#N">N</a></li>
+						<li><a href="#O">O</a></li>
+						<li><a href="#P">P</a></li>
+						<li><a href="#Q">Q</a></li>
+						<li><a href="#R">R</a></li>
+						<li><a href="#S">S</a></li>
+						<li><a href="#T">T</a></li>
+						<li><a href="#U">U</a></li>
+						<li><a href="#V">V</a></li>
+						<li><a href="#W">W</a></li>
+						<li><a href="#X">X</a></li>
+						<li><a href="#Y">Y</a></li>
+						<li><a href="#Z">Z</a></li>
 					</ul>
 				</div>
 			</div>
@@ -92,14 +109,26 @@
 							$conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
 							$db_selected = mysql_select_db($dbname, $conn);  if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
 							
-							$result = mysql_query("SELECT * FROM Record"); 
+							$result = mysql_query("SELECT * FROM Record ORDER BY " . $sort_by); 
 							
 							$counter = 0; // used just coloring effects
 							$offset = 0;
+							
+							$previous_letter = NULL;
+							$current_letter = NULL;
+							
 							while($row = mysql_fetch_array($result)) {  //while loop is closed in next php tag
-								$id = strtolower($row['record_name'][0]); // s
-						?>
-						<li id="<?php echo $id ?>" class="record-item-<?php echo ($counter%2 + $offset%2)%2 ?>">
+								$current_letter = strtoupper(substr($row[$sort_by], 0, 1));
+								
+								if($current_letter !== $previous_letter) { 
+									$previous_letter = $current_letter;
+									$counter = 0;
+									$offset = 0; ?>
+									<li id="<?php echo $previous_letter ?>" class="record-item-section">
+										<h3><?php echo $previous_letter ?></h3>
+									</li>
+								<?php } ?>
+						<li class="record-item-<?php echo ($counter%2 + $offset%2)%2 ?>">
 							<ul class="media-list">
 								<a href="#" style="display:block">
 									<li class="media add-record-box">
@@ -107,9 +136,8 @@
 										<span class="glyphicon glyphicon-plus"></span> ADD
 									</li>
 								</a>
-								<p>Artist <?php echo $counter ?></p>
-								<p><?php echo $row['record_name'];?></p>
-								<p>Genre</p>
+								<p>Artist: <?php echo $row['artist_name'] ?></p>
+								<p>Album: <?php echo $row['record_name'] ?></p>
 							</ul>
 						</li>
 						<?php ++$counter;

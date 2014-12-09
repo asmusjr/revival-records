@@ -205,12 +205,12 @@ footer a:active {
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
 	background-color:#C93838;
 }
-.records-list{
+.records-list {
 	margin:0;
 	padding:0;
 	list-style:none;
 }
-.records-list li{
+.records-list li {
 	float:left;
 	width:25%;
 	height:115px;
@@ -223,7 +223,7 @@ footer a:active {
 .records-list li a {
 	color:white;
 }
-.records-list .glyphicon{
+.records-list .glyphicon {
 	margin-top:5px;
 	margin-bottom:10px;
 	font-size:12px;
@@ -233,6 +233,17 @@ footer a:active {
 }
 .record-item-1 {
 	background-color:#EBEBEB;
+}
+.record-item-section {
+	width:100% !important;
+	height:30px !important;
+	padding:0 0 4px 0 !important;
+	background-color:black !important;
+	color:white !important;
+}
+.record-item-section h3 {
+	margin:0;
+	padding:0;
 }
 .records-list li:hover{
 	color:#fff;
@@ -427,4 +438,21 @@ h2:first-of-type { padding-top: 0; }
 }
 .rowTextCentered{
 	text-align:center;
+}
+/* -------------------------------- */
+/*            ADMIN PAGES           */
+/* -------------------------------- */
+.parent {
+    display:table;
+	height:500px;
+    table-layout:fixed;
+	    border:2px solid black;
+
+}
+.child {
+    border:2px solid red;
+
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
 }
