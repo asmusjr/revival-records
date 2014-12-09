@@ -421,6 +421,19 @@ h2:first-of-type { padding-top: 0; }
 	border-color: none;
 	outline: none;
 }
+
+.youtube{
+	margin-top: 20px;	
+}
+
+.left-15-padding{
+	margin-left: 10px;	
+}
+
+.top-15-margin{
+	margin-top: 30px;	
+}
+
 /* -------------------------------- */
 /*           CONTACT PAGE           */
 /* -------------------------------- */
