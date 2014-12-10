@@ -26,6 +26,7 @@
         
         <?php echo $_SESSION['myvar']; ?>
 		
+		
 		<div class="container">
 			<div class="row main-content">
 				<div class=" col-md-12">
@@ -34,23 +35,38 @@
 						<h4 class="text-muted">Welcome to the administrative tools for the about page.</h4>
                     </div>
                     <hr />
+					<?php	$about_store_file = "../about/about-store.html";
+							$about_records_file = "../about/about-records.html";
+							
+					if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+						if (isset($_POST['btn-about'])) {
+							$file = fopen($about_store_file, "w+"); 
+							fwrite($file, $_POST['about-store']);
+							fclose($file);
+							
+							$file = fopen($about_records_file, "w+"); 
+							fwrite($file, $_POST['about-records']);
+							fclose($file);
+							echo "<p class='text-center'><b>Update successful</b></p>";
+						}
+					} ?>
 					<p class="text-center">You can edit the text displayed on the about page by typing desired changes into the box below for one or both sections.</p>
                     <div class="row">
-                    	<form>
+                    	<form action="update_about.php" id="update-about" method="post">
                             <div class="col-md-6 text-center">
                                 <p>
                                     About the Store
                                     <br/>
-                                    <input type="text" name="aboutstore"/>
+                                    <textarea form="update-about" type="text" rows="4" cols="50" name="about-store"><?php include $about_store_file ?></textarea>
                                 </p>
                             </div>
                             <div class="col-md-6 text-center">
                             	<p>
                                 	About the Records
                                     <br />
-                                    <input type="text" name="aboutrecords"/>
+                                    <textarea form="update-about" type="text" rows="4" cols="50" name="about-records"><?php include $about_records_file ?></textarea>
                                 </p>
-                                <input class="btn btn-danger pull-right" type="submit" value="Submit Changes"/>
+								<input class="btn btn-danger pull-right" name="btn-about" type="submit" value="Submit Changes"/>
                             </div>
                         </form>
                     </div>

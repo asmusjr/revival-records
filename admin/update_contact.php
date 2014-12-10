@@ -24,14 +24,6 @@
 	<body id="admin-body">
 		<?php include 'header-footer.php' ?>
         
-		<?php	$store_hours_file = "../contact/store-hours.html";
-				if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-					if (isset($_POST['btn-hours'])) {
-						$file = fopen($store_hours_file, "w+"); 
-						fwrite($file, $_POST['store-hours']);
-						fclose($file);
-					}
-		} ?>
 		
         <?php echo $_SESSION['myvar']; ?>
 		
@@ -43,9 +35,20 @@
 						<h4 class="text-muted">Welcome to the administrative tools for the contact page.</h4>
                     </div>
                     <hr />
+					<?php	$store_hours_file = "../contact/store-hours.html";
+							if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+								if (isset($_POST['btn-hours'])) {
+									$file = fopen($store_hours_file, "w+"); 
+									fwrite($file, $_POST['store-hours']);
+									fclose($file);
+									echo "<p class='text-center'><b>Update successful</b></p>";
+								}
+							} ?>
 					<p class="text-center">You can edit the hours displayed on the page by typing desired changes into the box below.</p>					
 						<form action="update_contact.php" id="update-hours" method="post" class="text-center">
-							<p>Store Hours: <textarea form="update-hours" type="text" rows="4" cols="50" name="store-hours"><?php include "../contact/store-hours.html" ?></textarea></p>
+							<p>Store Hours: 
+								<textarea form="update-hours" type="text" rows="4" cols="50" name="store-hours"><?php include $store_hours_file ?></textarea>
+							</p>
 							<input class="btn btn-danger pull-right" name="btn-hours" type="submit" value="Submit Changes"/>
 						</form>
 				</div>

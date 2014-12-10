@@ -34,49 +34,83 @@
 						<h4 class="text-muted">Welcome to the administrative tools for the home page.</h4>
                     </div>
                     <hr />
+					<?php	$title_1_file = "../home/title-1.txt";
+							$title_2_file = "../home/title-2.txt";
+							$title_3_file = "../home/title-3.txt";
+							$content_1_file = "../home/content-1.html";
+							$content_2_file = "../home/content-2.html";
+							$content_3_file = "../home/content-3.html";
+							if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+								if (isset($_POST['btn-home'])) {
+									$file = fopen($title_1_file, "w+"); 
+									fwrite($file, $_POST['title-1']);
+									fclose($file);
+									
+									$file = fopen($title_2_file, "w+"); 
+									fwrite($file, $_POST['title-2']);
+									fclose($file);
+									
+									$file = fopen($title_3_file, "w+"); 
+									fwrite($file, $_POST['title-3']);
+									fclose($file);
+									
+									$file = fopen($content_1_file, "w+"); 
+									fwrite($file, $_POST['content-1']);
+									fclose($file);
+									
+									$file = fopen($content_2_file, "w+"); 
+									fwrite($file, $_POST['content-2']);
+									fclose($file);
+									
+									$file = fopen($content_3_file, "w+"); 
+									fwrite($file, $_POST['content-3']);
+									fclose($file);
+									
+									echo "<p class='text-center'><b>Update successful</b></p>";
+								}
+							} ?>
 					<p class="text-center">You can edit the text displayed on the three main sections of the about page.
                     <br/>Sections are listed from left to right. 
                     <br/>To update, type desired changes into the box below for any or all of the sections.</p>
                     <div class="row">
-                    	<form>
-                        <div class="col-md-4 text-center top-15-margin">
-                        	<p>
-                            	Header 1
-                                <br/>
-                                <input type="text" name="header1"/>
-                            </p>
-                        	<p>
-                            	Content 1
-                                <br/>
-                                <input type="text" name="content1"/>
-                            </p>
-                        </div>
-                        <div class="col-md-4 text-center top-15-margin">
-                        	<p>
-                            	Header 2
-                                <br />
-                                <input type="text" name="header2"/>
-                            </p>
-                            <p>
-                            	Content 2
-                                <br />
-                                <input type="text" name="content2"/>
-                            </p>
-                        </div>
-                        <div class="col-md-4 text-center top-15-margin">
-                        	<p>
-                            	Header 3
-                                <br/>
-                                <input type="text" name="header3"/>
-                            </p>
-                            <p>
-                            	Content 3
-                                <br />
-                                <input type="text" name="content3"/>
-                            </p>
-                            <input class="btn btn-danger top-15-margin pull-right" type="submit" value="Submit Changes"/>
-                        </div>
-                        
+						<form action="update_home.php" id="update-home" method="post">
+							<div class="col-md-4 text-center top-15-margin">
+								<p>
+									Header 1
+									<br/>
+									<input type="text" name="title-1" value="<?php include $title_1_file ?>" />
+								</p>
+								<p>
+									Content 1
+									<br/>									
+									<textarea form="update-home" type="text" rows="4" cols="50" name="content-1"><?php include $content_1_file ?></textarea>
+								</p>
+							</div>
+							<div class="col-md-4 text-center top-15-margin">
+								<p>
+									Header 2
+									<br />
+									<input type="text" name="title-2" value="<?php include $title_2_file ?>" />
+								</p>
+								<p>
+									Content 2
+									<br />
+									<textarea form="update-home" type="text" rows="4" cols="50" name="content-2"><?php include $content_2_file ?></textarea>
+								</p>
+							</div>
+							<div class="col-md-4 text-center top-15-margin">
+								<p>
+									Header 3
+									<br/>
+									<input type="text" name="title-3" value="<?php include $title_3_file ?>" />
+								</p>
+								<p>
+									Content 3
+									<br />
+									<textarea form="update-home" type="text" rows="4" cols="50" name="content-3"><?php include $content_3_file ?></textarea>
+								</p>
+								<input class="btn btn-danger top-15-margin pull-right" name="btn-home" type="submit" value="Submit Changes"/>
+							</div>                        
                         </form>
                     </div>
 				</div>
