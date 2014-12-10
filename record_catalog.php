@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -131,12 +132,17 @@
 								<?php } ?>
 						<li class="record-item-<?php echo ($counter%2 + $offset%2)%2 ?>">
 							<ul class="media-list">
-								<a href="#" style="display:block">
-									<li class="media add-record-box">
-										<img src="img/record.png" width="50px">
-										<span class="glyphicon glyphicon-plus"></span> ADD
-									</li>
-								</a>
+								<form action="insert_record.php" id="insert_record-<?php echo $counter ?>" method="post">
+									<input type="hidden" value ="<?php echo $row['record_name'];?>" name="record_name" />
+									<input type="hidden" value ="<?php echo $row['artist_name'];?>" name="artist_name" />
+										<a href="#" onclick="$('#insert_record-<?php echo $counter ?>').submit()" style="display:block">
+											<li class="media add-record-box">
+												<img src="img/record.png" width="50px">
+												<span class="glyphicon glyphicon-plus"></span> ADD
+											</li>
+										</a>
+										</input>
+								</form>
 								<p>Artist: <?php echo $row['artist_name'] ?></p>
 								<p>Album: <?php echo $row['record_name'] ?></p>
 								<p>Genre: <?php echo $row['genre'] ?></p>
