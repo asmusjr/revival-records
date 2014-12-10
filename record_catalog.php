@@ -137,8 +137,8 @@
 									<input type="hidden" value ="<?php echo $row['artist_name'];?>" name="artist_name" />
 										<a href="#" onclick="$('#insert_record-<?php echo $counter ?>').submit()" style="display:block">
 											<li class="media add-record-box">
-												<img src="img/record.png" width="50px">
-												<span class="glyphicon glyphicon-plus"></span> ADD
+												<img src="img/recordrequest-notext-icon.png" width="50px">
+												ADD
 											</li>
 										</a>
 										</input>
