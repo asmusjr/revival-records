@@ -31,23 +31,29 @@
 				<div class=" col-md-12">
                 	<div class="text-center">
 						<h2 class="content-large-header">Edit <span class="text-muted">About</span></h2>
-						<p>Welcome to the administrative tools for the about page.</p>
+						<h4 class="text-muted">Welcome to the administrative tools for the about page.</h4>
                     </div>
                     <hr />
 					<p class="text-center">You can edit the text displayed on the about page by typing desired changes into the box below for one or both sections.</p>
-                     <form>
-                     	<table class="table edit-table">
-                        	<tr>
-                            	<td class="pull-right">About the Store:</td>
-                                <td><input type="text" name="aboutstore"/></td>
-                            </tr>
-                           	<tr>
-                            	<td class="pull-right">About the Records:</td>
-                                <td><input type="text" name="aboutrecords"/></td>
-                            </tr>
-                        </table>
-                           <input class="btn btn-danger pull-right" type="submit" value="Submit Changes"/>
+                    <div class="row">
+                    	<form>
+                            <div class="col-md-6 text-center">
+                                <p>
+                                    About the Store
+                                    <br/>
+                                    <input type="text" name="aboutstore"/>
+                                </p>
+                            </div>
+                            <div class="col-md-6 text-center">
+                            	<p>
+                                	About the Records
+                                    <br />
+                                    <input type="text" name="aboutrecords"/>
+                                </p>
+                                <input class="btn btn-danger pull-right" type="submit" value="Submit Changes"/>
+                            </div>
                         </form>
+                    </div>
 				</div>
             </div>
 		</div>

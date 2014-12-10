@@ -31,11 +31,11 @@
 				<div class=" col-md-12">
                 	<div class="text-center">
 						<h2 class="content-large-header">Edit <span class="text-muted">Contact</span></h2>
-						<p>Welcome to the administrative tools for the contact page.</p>
+						<h4 class="text-muted">Welcome to the administrative tools for the contact page.</h4>
                     </div>
                     <hr />
 					<p class="text-center">You can edit the hours displayed on the page by typing desired changes into the box below.</p>
-                     <form>
+                     <form class="text-center">
                            <p> Store Hours: <input type="text" name="storehours"/></p>
                            <input class="btn btn-danger pull-right" type="submit" value="Submit Changes"/>
                         </form>
