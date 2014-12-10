@@ -111,7 +111,7 @@
 							<div class="form-group">
 								<label for="inputRecord">Chosen Records:</label>
 								<br><textarea type="text" rows="7" cols="45" class="form-control" id="inputRecord" name="Request" readonly>
-							<?php if(isset($_SESSION['myRecords'])) {
+<?php if(isset($_SESSION['myRecords'])) {
 									foreach ($_SESSION['myRecords'] as $record) {
 										echo $record . "\n";
 									}
