@@ -540,3 +540,15 @@ h2:first-of-type { padding-top: 0; }
 .admin-li:hover {
 	background:transparent !important;
 }
+
+/* -------------------------------- */
+/*    ADMIN PAGES: UPDATE ABOUT     */
+/* -------------------------------- */
+
+.edit-table{
+	width: 100%;	
+}
+
+.edit-table tr,td{
+	margin: 10px;	
+}
