@@ -7,7 +7,8 @@
 	$conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysql_connect_error());}
 	$db_selected = mysql_select_db($dbname, $conn); if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
 	
-	$recordID = $_POST["record_id"];
+	$recordID = $_POST["record_id"];	
+
 	$sql = mysql_query("DELETE FROM Record WHERE record_id='$recordID'");
 
 	if ($sql) {

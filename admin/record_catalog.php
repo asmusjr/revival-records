@@ -103,13 +103,19 @@
 						<?php } ?>
 						<li class="record-item-0">
 							<ul class="media-list">
-								<li class="admin-li">										
+								<li class="admin-li">
 									<div data-toggle="modal" data-target="#editModal" id="editRecord" style="display:inline-block">
-										<input type="hidden" value ="<?php echo $row['record_id'];?>" class="form-control" name="record_id" id="recordID" placeholder="Record ID">
-										<input class="btn btn-default" type="submit" value="Edit" />
+										<form id="modal_info">
+											<input type="hidden" value = "<?php echo $row['record_id'];?>" class="form-control" name="record_id" id="recordIDEdit">
+											<input type="hidden" value = "<?php echo $row['artist_name'];?>" class="form-control" name="artist_name" id="artistNameEdit">
+											<input type="hidden" value = "<?php echo $row['record_name'];?>" class="form-control" name="record_name" id="recordNameEdit">
+											<input type="hidden" value = "<?php echo $row['record_year'];?>" class="form-control" name="record_year" id="recordYearEdit">
+											<input type="hidden" value = "<?php echo $row['genre'];?>" class="form-control" name="record_genre" id="genreEdit">
+											<input class="btn btn-default" type="button" value="Edit" onclick="populate(this.form.recordIDEdit.value, this.form.artistNameEdit.value, this.form.recordNameEdit.value, this.form.recordYearEdit.value, this.form.genreEdit.value);" />
+										</form>
 									</div>
 									<form action="remove_record.php" method="post">
-										<input type="hidden" value ="<?php echo $row['record_id'];?>" name="record_id" />
+										<input type="hidden" value = "<?php echo $row['record_id'];?>" name="record_id" />
 										<input class="btn btn-danger" type="submit" value="Remove" />
 									</form>
 								</li>	
@@ -126,7 +132,7 @@
 			</div>
 		</div>
 		
-        <form action="insert_record.php" method="post">
+		<form action="insert_record.php" method="post">
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -162,8 +168,7 @@
 				</div>
 			</div>
         </form>
-        
-        <form action="update_record.php" method="post">
+		<form action="update_record.php" method="post">
 			<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -172,32 +177,35 @@
 							<h4 class="modal-title" id="myModalLabel">Edit Record</h4>
 						</div>
 						<div class="modal-body">
-						<form>					   
-							<div class="form-group">
-								<label for="recordName">Record Name</label>
-								<input type="text"  class="form-control" name="record_name" id="record_name" placeholder="Record Name">
-							</div>
-							<div class="form-group">
-								<label for="recordYear">Record Year</label>
-								<input type="text"  class="form-control" name="record_year" id="record_year" placeholder="Record Year">
-							</div>
-							<div class="form-group">
-								<label for="artistName">Artist Name</label>
-								<input type="text"  class="form-control" name="artist_name" id="artist_name" placeholder="Artist Name">
-							</div>
-							<div class="form-group">
-								<label for="artistName">Genre</label>
-								<input type="text" class="form-control" name="genre" id="genre" placeholder="Genre">
-							</div>
-						</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-lg" data-dismiss="modal">Close</button>
-						<button type="submit" class="btn btn-lg btn-primary">Save</button>
+							<form>
+							   <div class="form-group">
+									<input type="hidden" class="form-control" name="record_id" id="record_id" placeholder="Record ID">	
+								</div>
+								<div class="form-group">
+									<label for="recordName">Record Name</label>
+									<input type="text"  class="form-control" name="record_name" id="record_name" placeholder="Record Name">
+								</div>
+								<div class="form-group">
+									<label for="recordYear">Record Year</label>
+									<input type="text"  class="form-control" name="record_year" id="record_year" placeholder="Record Year">
+								</div>
+								<div class="form-group">
+									<label for="artistName">Artist Name</label>
+									<input type="text"  class="form-control" name="artist_name" id="artist_name" placeholder="Artist Name">
+								</div>
+								<div class="form-group">
+									<label for="genre">Genre</label>
+									<input type="text" class="form-control" name="genre" id="record_genre" placeholder="Genre">
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-lg" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-lg btn-primary">Save</button>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</form>
+		</form>
     </body>
 </html>

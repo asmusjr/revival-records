@@ -7,3 +7,17 @@ $(document).ready(function() {		// updates active link on navbar
 		li.parent().addClass('active');
 	}
 });
+
+function populate(recordID, artistName, recordName, recordYear, genre){
+	var recordID = recordID;
+	var artistName = artistName;
+	var recordName = recordName;
+	var recordYear = recordYear;
+	var genre = genre;
+	
+	$('#record_id').val(recordID);
+	$('#artist_name').val(artistName);
+	$('#record_name').val(recordName);
+	$('#record_year').val(recordYear);
+	$('#record_genre').val(genre);            
+}
