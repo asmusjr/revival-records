@@ -39,9 +39,9 @@
 						128 S. Barstow St.<br/>
 						Eau Claire, Wisconsin<br/>
 						54701</p>
+					<h4 class="text-muted no-margin">Store Hours</h4>
 					<p class="lead small-text-muted">
-						Open Monday through Saturday <br/> 11AM - 7PM.<br/>
-						Closed Sundays.</p>
+						<?php include "contact/store-hours.html" ?>
 					<h4 class="text-muted no-margin">Social Media</h4>
 					<p class="lead small-text-muted">
 						Like us on Facebook: <a href="https://www.facebook.com/pages/Revival-Records/111980655498485" target="_blank">Revival-Records</a><br/>
