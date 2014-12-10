@@ -126,6 +126,7 @@
 							<input type="hidden" name="form_delivery" value="default"/> 
 							<input type="hidden" name="form_format" value="html"/>
 						</form>
+						<script>$.validate();</script>
 					</div>
 				</div>
 			</div>
