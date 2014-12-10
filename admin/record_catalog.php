@@ -20,6 +20,8 @@
         <script src="../js/plugins.js"></script>
         <script src="../js/admin.js"></script>
     	<script src="../js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
+		<script>$.validate();</script>
 	</head>
 	<body id="admin-body">
 		<?php include 'header-footer.php' ?>
@@ -144,19 +146,19 @@
 							<form>
 								<div class="form-group">
 									<label for="recordName">Record Name</label>
-									<input type="text" class="form-control" name="recordName" id="recordName" placeholder="Record Name">
+									<input type="text" class="form-control" name="recordName" id="recordName" placeholder="Record Name" data-validation="length" data-validation-length="min1">
 								</div>
 								<div class="form-group">
 									<label for="recordYear">Record Year</label>
-									<input type="text" class="form-control" name="recordYear" id="recordYear" placeholder="Record Year">
+									<input type="text" class="form-control" name="recordYear" id="recordYear" placeholder="Record Year" data-validation="number">
 								</div>
 								<div class="form-group">
 									<label for="artistName">Artist Name</label>
-									<input type="text" class="form-control" name="artistName" id="artistName" placeholder="Artist Name">
+									<input type="text" class="form-control" name="artistName" id="artistName" placeholder="Artist Name" data-validation="length" data-validation-length="min1">
 								</div>
 								<div class="form-group">
 									<label for="artistName">Genre</label>
-									<input type="text" class="form-control" name="genre" id="genre" placeholder="Genre">
+									<input type="text" class="form-control" name="genre" id="genre" placeholder="Genre" data-validation="length" data-validation-length="min1">
 								</div>
 							</form>
 						</div>
@@ -168,6 +170,7 @@
 				</div>
 			</div>
         </form>
+        <script>$.validate();</script>
 		<form action="update_record.php" method="post">
 			<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
@@ -179,25 +182,26 @@
 						<div class="modal-body">
 							<form>
 							   <div class="form-group">
-									<input type="hidden" class="form-control" name="record_id" id="record_id" placeholder="Record ID">	
+									<input type="hidden" class="form-control" name="record_id" id="record_id" placeholder="Record ID" data-validation="number">	
 								</div>
 								<div class="form-group">
 									<label for="recordName">Record Name</label>
-									<input type="text"  class="form-control" name="record_name" id="record_name" placeholder="Record Name">
+									<input type="text"  class="form-control" name="record_name" id="record_name" placeholder="Record Name" data-validation="length" data-validation-length="min1">
 								</div>
 								<div class="form-group">
 									<label for="recordYear">Record Year</label>
-									<input type="text"  class="form-control" name="record_year" id="record_year" placeholder="Record Year">
+									<input type="text"  class="form-control" name="record_year" id="record_year" placeholder="Record Year" data-validation="number">
 								</div>
 								<div class="form-group">
 									<label for="artistName">Artist Name</label>
-									<input type="text"  class="form-control" name="artist_name" id="artist_name" placeholder="Artist Name">
+									<input type="text"  class="form-control" name="artist_name" id="artist_name" placeholder="Artist Name" data-validation="length" data-validation-length="min1">
 								</div>
 								<div class="form-group">
 									<label for="genre">Genre</label>
-									<input type="text" class="form-control" name="genre" id="record_genre" placeholder="Genre">
+									<input type="text" class="form-control" name="genre" id="record_genre" placeholder="Genre" data-validation="length" data-validation-length="min1">
 								</div>
 							</form>
+                        <script>$.validate();</script>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-lg" data-dismiss="modal">Close</button>
