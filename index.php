@@ -43,7 +43,7 @@
 								<div class="carousel-caption">
 									<h1>We've moved to a bigger store!</h1>
 									<p>We are now located at 128 S. Barstow St.</p>
-									<p><a class="btn btn-lg btn-danger" href="visit.php" role="button">Visit us</a></p>
+									<p><a class="btn btn-lg btn-danger" href="contact.php" role="button">Visit us</a></p>
 								</div>
 							</div>
 						</div>
@@ -51,9 +51,9 @@
 							<img src="img/revdif.png" alt="Second slide" />
 							<div class="container">
 								<div class="carousel-caption">
-									<h1>Promotional Material</h1>
-									<p>The various promotional information can go on this part.</p>
-									<p><a class="btn btn-lg btn-warning" href="#" role="button">Learn more</a></p>
+									<h1>Learn about our store</h1>
+									<p>Head over to the about page to learn about Revival Records.</p>
+									<p><a class="btn btn-lg btn-warning" href="about.php" role="button">Learn more</a></p>
 								</div>
 							</div>
 						</div>
@@ -61,9 +61,9 @@
 							<img src="img/RSDvector2_20131.jpg" alt="Third slide">
 							<div class="container">
 								<div class="carousel-caption">
-									<h1>International Record Day</h1>
-									<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-									<p><a class="btn btn-lg btn-danger" href="record_catalog.php" role="button">Browse gallery</a></p>
+									<h1>International Store Record Day</h1>
+									<p>Mark your calendars!<br/>April 20, 2014</p>
+									<p><a class="btn btn-lg btn-danger" href="record_catalog.php" role="button">Browse records</a></p>
 								</div>
 							</div>
 						</div>
@@ -77,7 +77,7 @@
 					<img class="img-circle" src="img/P1050121.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 					<h2><?php include 'index/title-1.txt' ?></h2>
 					<p>While we specialize in rock and roll records, we also carry a fantastic selection of new and used blues records, jazz records, soundtracks, reggae records, country records, hip hop and much more. We have a unique variety of LPs and 45s, 12" singles, 7" singles, and we also sell CDs. In addition to music we have record accessories, audio equipment, and apparel. Bottom line, there is something for everyone at Revival Records!</p>
-					<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+					<p><a class="btn btn-default" href="record_catalog.php" role="button">View details &raquo;</a></p>
 				</div>
 				<div class="col-md-4">
 					<img class="img-circle" src="img/P1050105.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
