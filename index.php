@@ -62,7 +62,7 @@
 							<div class="container">
 								<div class="carousel-caption">
 									<h1>International Store Record Day</h1>
-									<p>Mark your calendars!<br/>April 20, 2014</p>
+									<p>Mark your calendars!</p>
 									<p><a class="btn btn-lg btn-danger" href="record_catalog.php" role="button">Browse records</a></p>
 								</div>
 							</div>
