@@ -39,28 +39,28 @@
                         <div class="col-md-3 text-center">
                             <div class="round-button">
                                 <div class="round-button-circle">
-                                    <a href="update_home.php" class="round-button">Home</a>
+                                    <a href="update_home.php" class="round-button">Edit Home</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 text-center">
                             <div class="round-button">
                                 <div class="round-button-circle">
-                                    <a href="update_about.php" class="round-button">About</a>
+                                    <a href="update_about.php" class="round-button">Edit About</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 text-center">
                             <div class="round-button">
                                 <div class="round-button-circle">
-                                    <a href="update_contact.php" class="round-button">Contact</a>
+                                    <a href="update_contact.php" class="round-button">Edit Contact</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 text-center">
                             <div class="round-button">
                                 <div class="round-button-circle">
-                                    <a href="record_catalog.php" class="round-button">Records</a>
+                                    <a href="record_catalog.php" class="round-button">Edit Records</a>
                                 </div>
                             </div>
                         </div>
