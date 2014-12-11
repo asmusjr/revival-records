@@ -24,6 +24,12 @@
 							<li><a href="my_records.php">My Records</a></li>
 						</ul>
 					</li>
+					 <li><audio style="height: 40px;" controls>
+      		
+  						    <source src="http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a" type="audio/mpeg">
+					        Your browser does not support the audio element.
+					    </audio>
+                    			</li>
 				</ul>
 			</div>
 		</div>
