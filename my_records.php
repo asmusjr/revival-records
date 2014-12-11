@@ -123,8 +123,11 @@
 							<div class="form-group">
 								<label for="inputRecord">Chosen Records:</label>
 								<br>
-								<textarea type="text" rows="7" cols="45" class="form-control" id="inputRecord" name="Request" readonly style="cursor:default"><?php foreach ($_SESSION["myRecords"] as $record_id => $record) {
-										echo $record->record_name . ', ' . $record->artist_name . "\n";		
+								<textarea type="text" rows="7" cols="45" class="form-control" id="inputRecord" name="Request" readonly style="cursor:default"><?php
+									if(isset($_SESSION['myRecords'])) {
+										foreach ($_SESSION["myRecords"] as $record_id => $record) {
+											echo $record->record_name . ', ' . $record->artist_name . "\n";		
+										}
 									}?>
 								</textarea>
 							</div>

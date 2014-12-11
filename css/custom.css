@@ -12,12 +12,14 @@ body {
 }
 .main-content {
 	margin:10px 0 10px 0;
-	padding:10px 5px 25px 5px;
+	padding:10px 10px 25px 10px;
 	background-color:white;
+	
+	/* old border style:
 	border:4px solid;
-	border-radius:25px;
-	/*border-image-source: url(../img/stripes.png);
-	border-image-slice: 20; */
+	border-radius:25px; */
+	border-width:5px;
+	border-image:url("../img/red_texture2.png") 20 stretch;
 }
 a {
 	font-weight:bold;
@@ -68,6 +70,11 @@ a:hover {
 	width:100%;
 	height:170px;
 	pointer-events:none; /* allows clicking underlying elements */
+}
+@media (max-width:991px){
+	audio{
+		display:none;
+	}
 }
 /* -------------------------------- */
 /*              FOOTER              */
@@ -312,13 +319,11 @@ a:hover .add-record-box  {
 .record-link:hover{
 	border:2px solid red;
 }
-
 .record-link-active {
 	border:3px solid black;
 	border-radius:50px;
 	background-color:white;
 }
-
 .record-link-active:hover {
 	border:3px solid red;
 }
@@ -352,7 +357,7 @@ a:hover .add-record-box  {
 	border-radius:25px;
 }
 .carousel-indicators > li {
-	border:2px solid #d5281f;
+	border:2px solid grey;
 }
 .marketing p {
   margin-right: 10px;
@@ -365,7 +370,10 @@ a:hover .add-record-box  {
     line-height: 1.4;
   }
 }
-
+.promo-image {
+	width:140px;
+	height:140px;
+}
 h2:first-of-type { padding-top: 0; }
 .pagination {
   height: 36px;

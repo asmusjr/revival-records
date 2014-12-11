@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php session_start();
+	
+	function removeslashes($string) {
+		$string=implode("",explode("\\",$string));
+		return stripslashes(trim($string));
+	}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -42,29 +48,29 @@
 							$content_3_file = "../home/content-3.html";
 							if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 								if (isset($_POST['btn-home'])) {
-									$file = fopen($title_1_file, "w+"); 
-									fwrite($file, $_POST['title-1']);
-									fclose($file);
+									$file1 = fopen($title_1_file, "w+"); 
+									fwrite($file1, removeslashes(htmlspecialchars($_POST['title-1'], ENT_QUOTES, "UTF-8")));
+									fclose($file1);
 									
-									$file = fopen($title_2_file, "w+"); 
-									fwrite($file, $_POST['title-2']);
-									fclose($file);
+									$file2 = fopen($title_2_file, "w+"); 
+									fwrite($file2, removeslashes(htmlspecialchars($_POST['title-2'], ENT_QUOTES, "UTF-8")));
+									fclose($file2);
 									
-									$file = fopen($title_3_file, "w+"); 
-									fwrite($file, $_POST['title-3']);
-									fclose($file);
+									$file3 = fopen($title_3_file, "w+"); 
+									fwrite($file3, removeslashes(htmlspecialchars($_POST['title-3'], ENT_QUOTES, "UTF-8")));
+									fclose($file3);
 									
-									$file = fopen($content_1_file, "w+"); 
-									fwrite($file, $_POST['content-1']);
-									fclose($file);
+									$file4 = fopen($content_1_file, "w+"); 
+									fwrite($file4, removeslashes(htmlspecialchars($_POST['content-1'], ENT_QUOTES, "UTF-8")));
+									fclose($file4);
 									
-									$file = fopen($content_2_file, "w+"); 
-									fwrite($file, $_POST['content-2']);
-									fclose($file);
+									$file5 = fopen($content_2_file, "w+"); 
+									fwrite($file5, removeslashes(htmlspecialchars($_POST['content-2'], ENT_QUOTES, "UTF-8")));
+									fclose($file5);
 									
-									$file = fopen($content_3_file, "w+"); 
-									fwrite($file, $_POST['content-3']);
-									fclose($file);
+									$file6 = fopen($content_3_file, "w+"); 
+									fwrite($file6, removeslashes(htmlspecialchars($_POST['content-3'], ENT_QUOTES, "UTF-8")));
+									fclose($file6);
 									
 									echo "<p class='text-center'><b>Update successful</b></p>";
 								}
@@ -78,36 +84,36 @@
 								<p>
 									Header 1
 									<br/>
-									<input type="text" name="title-1" value="<?php include $title_1_file ?>" />
+									<input type="text" name="title-1" value="<?php htmlspecialchars_decode(include $title_1_file, ENT_QUOTES) ?>" />
 								</p>
 								<p>
 									Content 1
 									<br/>									
-									<textarea form="update-home" type="text" rows="4" cols="50" name="content-1"><?php include $content_1_file ?></textarea>
+									<textarea form="update-home" type="text" rows="4" cols="50" name="content-1"><?php include htmlspecialchars_decode($content_1_file, ENT_QUOTES) ?></textarea>
 								</p>
 							</div>
 							<div class="col-md-4 text-center top-15-margin">
 								<p>
 									Header 2
 									<br />
-									<input type="text" name="title-2" value="<?php include $title_2_file ?>" />
+									<input type="text" name="title-2" value="<?php include htmlspecialchars_decode($title_2_file, ENT_QUOTES) ?>" />
 								</p>
 								<p>
 									Content 2
 									<br />
-									<textarea form="update-home" type="text" rows="4" cols="50" name="content-2"><?php include $content_2_file ?></textarea>
+									<textarea form="update-home" type="text" rows="4" cols="50" name="content-2"><?php include htmlspecialchars_decode($content_2_file, ENT_QUOTES) ?></textarea>
 								</p>
 							</div>
 							<div class="col-md-4 text-center top-15-margin">
 								<p>
 									Header 3
 									<br/>
-									<input type="text" name="title-3" value="<?php include $title_3_file ?>" />
+									<input type="text" name="title-3" value="<?php htmlspecialchars_decode(include $title_3_file, ENT_QUOTES) ?>" />
 								</p>
 								<p>
 									Content 3
 									<br />
-									<textarea form="update-home" type="text" rows="4" cols="50" name="content-3"><?php include $content_3_file ?></textarea>
+									<textarea form="update-home" type="text" rows="4" cols="50" name="content-3"><?php include htmlspecialchars_decode($content_3_file, ENT_QUOTES) ?></textarea>
 								</p>
 								<input class="btn btn-danger top-15-margin pull-right" name="btn-home" type="submit" value="Submit Changes"/>
 							</div>                        

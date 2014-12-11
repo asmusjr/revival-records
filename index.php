@@ -30,61 +30,64 @@
 
 		<div class="container">
 			<div class="row">
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-					</ol>
-					<div class="carousel-inner">
-						<div class="item active">
-							<img src="img/digging at revival.jpg" alt="First slide" />
-							<div class="container">
-								<div class="carousel-caption">
-									<h1>We've moved to a bigger store!</h1>
-									<p>We are now located at 128 S. Barstow St.</p>
-									<p><a class="btn btn-lg btn-danger" href="contact.php" role="button">Visit us</a></p>
+				<div class="col-xs-12 col-lg-10 col-lg-offset-1">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="img/digging at revival.jpg" alt="First slide" />
+								<div class="container">
+									<div class="carousel-caption">
+										<h1>We've moved to a bigger store!</h1>
+										<p>We are now located at 128 S. Barstow St.</p>
+										<p><a class="btn btn-lg btn-danger" href="contact.php" role="button">Visit us</a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/revdif.png" alt="Second slide" />
+								<div class="container">
+									<div class="carousel-caption">
+										<h1>Learn about our store</h1>
+										<p>Head over to the about page to learn about Revival Records.</p>
+										<p><a class="btn btn-lg btn-warning" href="about.php" role="button">Learn more</a></p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<img src="img/justin-vernon.jpg" alt="Third slide">
+								<div class="container">
+									<div class="carousel-caption">
+										<h1>International Store Record Day</h1>
+										<p>Mark your calendars!</p>
+										<p>April 20, 2013</p>
+										<p><a class="btn btn-lg btn-danger" href="record_catalog.php" role="button">Browse records</a></p>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="item">
-							<img src="img/revdif.png" alt="Second slide" />
-							<div class="container">
-								<div class="carousel-caption">
-									<h1>Learn about our store</h1>
-									<p>Head over to the about page to learn about Revival Records.</p>
-									<p><a class="btn btn-lg btn-warning" href="about.php" role="button">Learn more</a></p>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<img src="img/RSDvector2_20131.jpg" alt="Third slide">
-							<div class="container">
-								<div class="carousel-caption">
-									<h1>International Store Record Day</h1>
-									<p>Mark your calendars!</p>
-									<p><a class="btn btn-lg btn-danger" href="record_catalog.php" role="button">Browse records</a></p>
-								</div>
-							</div>
-						</div>
+						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+						<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
-					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 				</div>
 			</div>
 			<div class="row text-center marketing main-content">
 				<div class="col-md-4">
-					<img class="img-circle" src="img/P1050121.jpg" style="width: 140px; height: 140px;">
+					<img class="img-circle promo-image" src="img/browsing-records.png">
 					<h2><?php include 'home/title-1.txt' ?></h2>
 					<?php include 'home/content-1.html'?>
 				</div>
 				<div class="col-md-4">
-					<img class="img-circle" src="img/P1050105.jpg" style="width: 140px; height: 140px;">
+					<img class="img-circle promo-image" src="img/record-spinner.png">
 					<h2><?php include 'home/title-2.txt'?></h2>
 					<?php include 'home/content-2.html'?>
 				</div>
 				<div class="col-md-4">
-					<img class="img-circle" src="img/P1050061.jpg" style="width: 140px; height: 140px;">
+					<img class="img-circle promo-image" src="img/store-front.png">
 					<h2><?php include 'home/title-3.txt'?></h2>
 					<?php include 'home/content-3.html'?>
 				</div>
