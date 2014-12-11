@@ -1,6 +1,7 @@
 <?php
     session_start();
-    unset($_SESSION['myRecords']);
+    session_unset();
+	session_destroy();
 ?>
 <script>
     window.location = "my_records.php";

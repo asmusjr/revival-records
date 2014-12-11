@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php	include "scripts/record.php";
+		session_start(); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -116,41 +117,53 @@
 							$counter = 0; // used just coloring effects
 							$offset = 0;
 							
+							$id = 0;
+							
 							$previous_letter = NULL;
 							$current_letter = NULL;
 							
 							while($row = mysql_fetch_array($result)) {  //while loop is closed in next php tag
 								$current_letter = strtoupper(substr($row[$sort_by], 0, 1));
 								
-								if($current_letter !== $previous_letter) { 
+								if($current_letter !== $previous_letter) {
 									$previous_letter = $current_letter;
 									$counter = 0;
 									$offset = 0; ?>
 									<li id="<?php echo $previous_letter ?>" class="record-item-section">
 										<h3><?php echo $previous_letter ?></h3>
 									</li>
-								<?php } ?>
+						<?php   } ?>
 						<li class="record-item-<?php echo ($counter%2 + $offset%2)%2 ?>">
 							<ul class="media-list">
-								<form action="insert_record.php" id="insert_record-<?php echo $counter ?>" method="post">
-									<input type="hidden" value ="<?php echo $row['record_name'];?>" name="record_name" />
-									<input type="hidden" value ="<?php echo $row['artist_name'];?>" name="artist_name" />
-										<a href="#" onclick="$('#insert_record-<?php echo $counter ?>').submit()" style="display:block">
+								<form action="insert_record.php" id="insert_record-<?php echo $id ?>" method="post">
+									<input type="hidden" value="<?php echo $row['record_name'];?>" name="record_name" />
+									<input type="hidden" value="<?php echo $row['artist_name'];?>" name="artist_name" />
+									<input type="hidden" value="<?php echo $row['genre']; ?>" name="genre" />
+									<input type="hidden" value="<?php echo $row['record_year']; ?>" name="record_year" />
+										<a onclick="$('#insert_record-<?php echo $id ?>').submit()" href="#" style="display:block">
 											<li class="media add-record-box">
 												<img src="img/recordrequest-notext-icon.png" width="50px">
 												ADD
 											</li>
 										</a>
-										</input>
+									</input>
 								</form>
+								<?php if($sorted_by_artist) { ?>
 								<p>Artist: <?php echo $row['artist_name'] ?></p>
 								<p>Album: <?php echo $row['record_name'] ?></p>
+								<?php } else { ?>
+								<p>Album: <?php echo $row['record_name'] ?></p>
+								<p>Artist: <?php echo $row['artist_name'] ?></p>
+								<?php } ?>
 								<p>Genre: <?php echo $row['genre'] ?></p>
 								<p>Year: <?php echo $row['record_year'] ?></p>
 							</ul>
 						</li>
 						<?php ++$counter;
-							if($counter%4==0) ++$offset;
+							if($counter % 4 == 0) {
+								++$offset;
+							}
+							++$id;
 						} //end of while loop
 						mysql_close($conn); ?>
 					</ul>

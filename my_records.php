@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php	include 'scripts/record.php';
+		session_start(); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -24,7 +25,7 @@
 		<script>$.validate();</script>
 	</head>
 	<body>
-		<?php include 'header-footer.php' ?>
+		<?php include 'header-footer.php'; ?>
 		
 		<div class="container">
 			<div class="row">
@@ -59,27 +60,38 @@
 				<div class="col-xs-12 main-content">
 					<ul class="records-list">
 						<?php if(isset($_SESSION['myRecords'])) {
-							foreach ((array)$_SESSION["myRecords"] as $record) { ?>
+								$record_id = 0;
+								foreach ($_SESSION["myRecords"] as $record) {
+								?>
 							<li class="record-item-0">
 								<ul class="media-list">
-									<form action="remove_record.php" id="remove_record" method="post">
-										<input type="hidden" value = "<?php echo $record ?>" name="record_name" />
-										<a href="#" onclick="$('#remove_record').submit()" style="display:block">
+									<form action="remove_record.php" id="remove_record-<?php echo $record_id ?>" method="post">
+										<input type="hidden" value="<?php echo $record->record_name; ?>" name="record_name" />
+										<input type="hidden" value="<?php echo $record->artist_name ?>" name="artist_name" />
+										<input type="hidden" value="<?php echo $record->genre ?>" name="genre" />
+										<input type="hidden" value="<?php echo $record->record_year ?>" name="record_year" />
+
+										<a href="#" onclick="$('#remove_record-<?php echo $record_id ?>').submit()" style="display:block">
 											<li class="media add-record-box">
 												<img src="img/record.png" width="50px">
 												<p>REMOVE</p>
 											</li>
 										</a>
 									</form>
-									<p><?php echo $record ?></p>
+									<p>Album: <?php echo $record->record_name; ?></p>
+									<p>Artist: <?php echo $record->artist_name; ?></p>
+									<p>Genre: <?php echo $record->genre; ?></p>
+									<p>Year: <?php echo $record->record_year; ?></p>
 								</ul>
 							</li>
-							<?php } 
+							<?php 
+								++$record_id;
+								}
 						} ?>
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div>	
 		
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
@@ -91,7 +103,7 @@
 					<div class="modal-body">
 						<form action="webformmailer.php" method="post">
 							<input type="hidden" name="subject" value="Submission" />
-							<input type="hidden" name="redirect" value="/test/my_records.php" />
+							<input type="hidden" name="redirect" value="my_records.php" />
 							<div class="form-group">
 								<label for="inputFirstName">First Name</label>
 								<input type="text" name="First name" class="form-control" id="inputFirstName" placeholder="First Name" data-validation="length" data-validation-length="min1">
@@ -110,12 +122,10 @@
 							</div>
 							<div class="form-group">
 								<label for="inputRecord">Chosen Records:</label>
-								<br><textarea type="text" rows="7" cols="45" class="form-control" id="inputRecord" name="Request" readonly>
-<?php if(isset($_SESSION['myRecords'])) {
-									foreach ($_SESSION['myRecords'] as $record) {
-										echo $record . "\n";
-									}
-								}?>
+								<br>
+								<textarea type="text" rows="7" cols="45" class="form-control" id="inputRecord" name="Request" readonly style="cursor:default"><?php foreach ($_SESSION["myRecords"] as $record_id => $record) {
+										echo $record->record_name . ', ' . $record->artist_name . "\n";		
+									}?>
 								</textarea>
 							</div>
 							<div class="modal-footer">
