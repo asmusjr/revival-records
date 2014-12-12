@@ -19,7 +19,6 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/about.js"></script>
-    	<script src="js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
 	</head>
 	<body>
 		<?php include 'header-footer.php' ?>

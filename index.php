@@ -18,7 +18,6 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-    	<script src="js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
     </head>
     
     <body>
@@ -79,7 +78,7 @@
 				<div class="col-md-4">
 					<img class="img-circle promo-image" src="img/browsing-records.png">
 					<h2><?php include 'home/title-1.txt' ?></h2>
-					<?php include 'home/content-1.html'?>
+					<?php htmlspecialchars_decode(include 'home/content-1.html', ENT_QUOTES) ?>
 				</div>
 				<div class="col-md-4">
 					<img class="img-circle promo-image" src="img/record-spinner.png">
