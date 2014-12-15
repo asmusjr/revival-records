@@ -63,45 +63,23 @@
 					</p>
                     <div class="row">
 						<form action="update_home.php" id="update-home" method="post">
-							<div class="col-xs-12 col-lg-12 text-center top-15-margin">
-								<p>
-									Header 1
-									<br/>
-									<input type="text" name="title-1" value="<?php include $title_1_path ?>" />
-								</p>
-								<p>
-									Content 1
-									<br/>
-									<textarea form="update-home" id="content-1" type="text" rows="4" cols="50" name="content-1"><?php include $content_1_path ?></textarea>
-								</p>
+							<div class="col-xs-12 col-lg-4 text-center top-15-margin">
+								<h2>Content 1</h2>
+								<textarea form="update-home" class="ckeditor" type="text" name="content-1"><?php include $content_1_path ?></textarea>
 							</div>
-							<div class="col-md-4 text-center top-15-margin">
-								<p>
-									Header 2
-									<br/>
-									<input type="text" name="title-2" value="<?php include $title_2_path ?>" />
-								</p>
-								<p>
-									Content 2
-									<br/>
-									<textarea form="update-home" id="content-2" type="text" rows="4" cols="50" name="content-2"><?php include $content_2_path ?></textarea>
-								</p>
+							<div class="col-xs-12 col-lg-4 text-center top-15-margin">
+								<h2>Content 2</h2>
+								<textarea form="update-home" class="ckeditor" type="text" name="content-2"><?php include $content_2_path ?></textarea>
 							</div>
-							<div class="col-md-4 text-center top-15-margin">
-								<p>
-									Header 3
-									<br/>
-									<input type="text" name="title-3" value="<?php include $title_3_path ?>" />
-								</p>
-								<p>
-									Content 3
-									<br/>
-									<textarea form="update-home" class="ckeditor" type="text" rows="4" cols="50" name="content-3"><?php include $content_3_path ?></textarea>
-								</p>
-								<input class="btn btn-danger top-15-margin pull-right" name="btn-home" type="submit" value="Submit Changes"/>
+							<div class="col-xs-12 col-lg-4 text-center top-15-margin">
+								<h2>Content 3</h2>
+								<textarea form="update-home" class="ckeditor" type="text" name="content-3"><?php include $content_3_path ?></textarea>
+							</div>
+							<div class="col-xs-12 col-lg-12 top-15-margin">
+								<input class="btn btn-danger pull-right" name="btn-home" type="submit" value="Submit Changes" />
 							</div>
                         </form>
-                    </div>
+					</div>
 				</div>
             </div>
 		</div>
