@@ -18,9 +18,9 @@
         <script src="../js/vendor/jquery-1.10.2.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/plugins.js"></script>
-        <script src="../js/admin.js"></script>
 		<script src="../ckeditor/ckeditor.js"></script>
 		<script src="../js/bootstrap-growl.min.js"></script>
+        <script src="../js/admin.js"></script>
 	</head>
 	<body id="admin">
 		<?php include 'header-footer.php' ?>

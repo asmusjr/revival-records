@@ -24,5 +24,5 @@
 	mysql_close($conn);
 ?>
 <script>
-    window.location="record_catalog.php";
+    window.location= "record_catalog.php?message=" + "<?php echo $_POST['recordName']?> by <?php echo $_POST['artistName']?> added";
 </script>

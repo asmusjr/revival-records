@@ -19,5 +19,5 @@
 	mysql_close($conn);
 ?>
 <script>
-    window.location="record_catalog.php";
+	window.location= "record_catalog.php?message=Record removed";
 </script>

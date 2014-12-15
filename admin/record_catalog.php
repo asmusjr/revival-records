@@ -18,14 +18,20 @@
         <script src="../js/vendor/jquery-1.10.2.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/plugins.js"></script>
-        <script src="../js/admin.js"></script>
 		<script src="../ckeditor/ckeditor.js"></script>
 		<script src="../js/bootstrap-growl.min.js"></script>
+        <script src="../js/admin.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
 		<script>$.validate();</script>
 	</head>
 	<body id="admin">
-		<?php include 'header-footer.php' ?>
+		<?php include 'header-footer.php';
+		
+		if($_GET["message"]) { ?>
+			<script>
+				$.growl("<?php echo $_GET["message"] ?>");
+			</script>
+		<?php } ?>
 		<div class="container">
 			<div class="row main-content">
 				<div class="col-md-8">
@@ -147,16 +153,16 @@
 									<input type="text" class="form-control" name="recordName" id="recordName" placeholder="Record Name" data-validation="length" data-validation-length="min1">
 								</div>
 								<div class="form-group">
-									<label for="recordYear">Record Year</label>
-									<input type="text" class="form-control" name="recordYear" id="recordYear" placeholder="Record Year" data-validation="number">
-								</div>
-								<div class="form-group">
 									<label for="artistName">Artist Name</label>
 									<input type="text" class="form-control" name="artistName" id="artistName" placeholder="Artist Name" data-validation="length" data-validation-length="min1">
 								</div>
 								<div class="form-group">
 									<label for="artistName">Genre</label>
 									<input type="text" class="form-control" name="genre" id="genre" placeholder="Genre" data-validation="length" data-validation-length="min1">
+								</div>
+								<div class="form-group">
+									<label for="recordYear">Record Year</label>
+									<input type="text" class="form-control" name="recordYear" id="recordYear" placeholder="Record Year" data-validation="number">
 								</div>
 							</form>
 						</div>
