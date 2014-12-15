@@ -211,5 +211,5 @@ fclose($fp);
 
 
 <script>
-    window.location = "my_records.php";
+    window.location = "my_records.php?message=Request submitted";
 </script>
