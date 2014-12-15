@@ -19,6 +19,7 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/plugins.js"></script>
         <script src="../js/admin.js"></script>
+		<script src="../js/bootstrap-growl.min.js"></script>
 		<script src="../ckeditor/ckeditor.js"></script>
     </head>
 	<body id="admin">
@@ -52,7 +53,11 @@
 									fwrite($content_3_file, htmlspecialchars($_POST['content-3'], ENT_QUOTES, "UTF-8"));
 									fclose($content_3_file);
 									
-									echo "<p class='text-center'><b>Update successful</b></p>";
+								?>
+							<script>
+								$.growl("Home updated successfully");
+							</script>
+							<?php
 								}
 							} ?>
 							

@@ -19,7 +19,8 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/plugins.js"></script>
         <script src="../js/admin.js"></script>
-    	<script src="../js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
+		<script src="../ckeditor/ckeditor.js"></script>
+		<script src="../js/bootstrap-growl.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
 		<script>$.validate();</script>
 	</head>

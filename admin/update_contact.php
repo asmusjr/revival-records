@@ -13,13 +13,14 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="../css/master.css">
-
+		
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="../js/vendor/jquery-1.10.2.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/plugins.js"></script>
         <script src="../js/admin.js"></script>
-    	<script src="../js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
+		<script src="../ckeditor/ckeditor.js"></script>
+		<script src="../js/bootstrap-growl.min.js"></script>
 	</head>
 	<body id="admin">
 		<?php include 'header-footer.php' ?>
@@ -31,21 +32,23 @@
 						<h4 class="text-muted">Welcome to the administrative tools for the contact page.</h4>
                     </div>
                     <hr />
-					<?php	$store_hours_file = "../contact/store-hours.html";
+					<?php	$store_hours_path = "../contact/contact.html";
 							if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 								if (isset($_POST['btn-hours'])) {
-									$file = fopen($store_hours_file, "w+"); 
-									fwrite($file, $_POST['store-hours']);
+									$file = fopen($store_hours_path, "w+"); 
+									fwrite($file, htmlspecialchars($_POST['store-hours'], ENT_QUOTES, "UTF-8"));
 									fclose($file);
-									echo "<p class='text-center'><b>Update successful</b></p>";
-								}
-							} ?>
-					<p class="text-center">You can edit the hours displayed on the page by typing desired changes into the box below.</p>					
+								?>
+							<script>
+								$.growl("Contact updated successfully");
+							</script>
+							<?php }
+						} ?>
+					<p class="text-center">You can edit the contact information displayed on the page by typing desired changes into the box below.</p>					
 						<form action="update_contact.php" id="update-hours" method="post" class="text-center">
-							<p>Store Hours: 
-								<textarea form="update-hours" type="text" rows="4" cols="50" name="store-hours"><?php include $store_hours_file ?></textarea>
-							</p>
-							<input class="btn btn-danger pull-right" name="btn-hours" type="submit" value="Submit Changes"/>
+							<h2>Contact Information</h2>
+							<textarea form="update-hours" class="ckeditor" type="text" name="store-hours"><?php include $store_hours_path ?></textarea>
+							<input class="btn btn-danger top-15-margin pull-right" name="btn-hours" type="submit" value="Submit Changes"/>
 						</form>
 				</div>
             </div>

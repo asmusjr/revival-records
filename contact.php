@@ -22,29 +22,17 @@
 		<script src="js/contact.js"></script>
     </head>
 	<body id="swirl">
-		<?php include 'header-footer.php' ?>
+		<?php include 'header-footer.php';
+				$contact = "contact/contact.html";
+				$file = fopen($contact, "r") or die("Unable to load content");
+				$file_content = htmlspecialchars_decode(fread($file, filesize($contact))); ?>
 		<div class="container">
 			<div class="row main-content" id="left-side">
 				<div class="col-md-4">
 					<h2 class="content-large-header">Contact <span class="text-muted">Revival Records</span></h2>
 					<h4 class="text-muted">Explore our record collection today.</h4>
 					<hr/>
-					<h4 class="text-muted no-margin">Call us</h4>
-					<p class="lead small-text-muted">715-514-4202</p>
-					<h4 class="text-muted no-margin">Email us</h4>
-					<p class="lead small-text-muted">billy@revivalrecords.co</p>
-					<h4 class="text-muted no-margin">Visit us</h4>
-					<p class="lead small-text-muted">
-						128 S. Barstow St.<br/>
-						Eau Claire, Wisconsin<br/>
-						54701</p>
-					<h4 class="text-muted no-margin">Store Hours</h4>
-					<p class="lead small-text-muted">
-						<?php include "contact/store-hours.html" ?>
-					<h4 class="text-muted no-margin">Social Media</h4>
-					<p class="lead small-text-muted">
-						Like us on Facebook: <a href="https://www.facebook.com/pages/Revival-Records/111980655498485" target="_blank">Revival-Records</a><br/>
-						Follow us on Twitter: <a href="https://twitter.com/RevivalRcrds" target="_blank">@RevivalRcrds</a></p>
+					<?php echo $file_content ?>
 				</div>
 				<div class="col-md-8" id="map-container"></div>
 			</div>

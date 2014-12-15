@@ -21,7 +21,15 @@
         <script src="js/about.js"></script>
 	</head>
 	<body id="swirl">
-		<?php include 'header-footer.php' ?>
+		<?php include 'header-footer.php';
+			$about_1 = "about/about-store.html";
+			$file_1 = fopen($about_1, "r") or die("Unable to load content 1");
+			$file_1_content = htmlspecialchars_decode(fread($file_1, filesize($about_1)));
+		
+			$about_2 = "about/about-records.html";
+			$file_2 = fopen($about_2, "r") or die("Unable to load content 2");
+			$file_2_content = htmlspecialchars_decode(fread($file_2, filesize($about_2)));
+		?>
         <div id="polaroid-background"></div>
         <div id="polaroid-large"></div>
 		<div class="container">
@@ -29,7 +37,7 @@
             	<div class="row">
                 	<div class="col-md-5 left-15-padding">
                         <h2 class="content-large-header">About <span class="text-muted">the Store</span></h2>
-                        <p><?php include "about/about-store.html" ?></p>
+                        <p><?php echo $file_1_content ?></p>
 					</div>
                     <div class="col-md-6 youtube">
                     	<iframe class="col-sm-12 col-xs-12" width="480" height="360" src="//www.youtube.com/embed/rfhZ6FvaJ3M" frameborder="0" allowfullscreen></iframe>
@@ -44,7 +52,7 @@
                     </div>
                     <div class="col-md-5">
                         <h2 class="content-large-header">About <span class="text-muted">the Records</span></h2>
-                        <p><?php include "about/about-records.html" ?></p>
+                        <p><?php echo $file_2_content ?></p>
 					</div>
                 </div>
 			</div>				

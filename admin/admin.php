@@ -19,7 +19,6 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/plugins.js"></script>
         <script src="../js/admin.js"></script>
-    	<script src="../js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
 	</head>
 	<body id="admin">
 		<?php include 'header-footer.php' ?>
