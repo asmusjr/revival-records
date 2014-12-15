@@ -19,12 +19,18 @@
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
+		<script src="js/bootstrap-growl.min.js"></script>
         <script src="js/main.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
 		<script>$.validate();</script>
 	</head>
 	<body id="swirl">
-		<?php include 'header-footer.php'; ?>
+		<?php include 'header-footer.php';
+		if($_GET["message"]) { ?>
+			<script>
+				$.growl("<?php echo $_GET["message"] ?>");
+			</script>
+		<?php } ?>
 		
 		<div class="container">
 			<div class="row">
@@ -58,8 +64,8 @@
 			<div class="row">
 				<div class="col-xs-12 main-content">
 					<ul class="records-list">
-						<?php if(isset($_SESSION['myRecords'])) {
-								$record_id = 0;
+						<?php		$record_id = 0;
+							if(isset($_SESSION['myRecords'])) {
 								foreach ($_SESSION["myRecords"] as $record) {
 								?>
 							<li class="record-item-0">
@@ -86,7 +92,10 @@
 							<?php 
 								++$record_id;
 								}
-						} ?>
+							}
+							if ($record_id ===0) {
+								echo "<p class='text-center'>You currently have no records to display.</p>";
+							}?>
 					</ul>
 				</div>
 			</div>

@@ -19,19 +19,28 @@
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
+		<script src="js/bootstrap-growl.min.js"></script>
         <script src="js/main.js"></script>
 	</head>
 	<body id="swirl">
-		<?php include 'header-footer.php' ?>
-
-		<?php
-			$sort_by = "artist_name";
+		<?php include 'header-footer.php';
+			if(!isset($_SESSION['sort-by'])) {
+				$_SESSION['sort-by'] = "artist_name";
+			}
 			if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				if (isset($_POST['sort-by']) && $_POST['sort-by'] === 'album') {
-					$sort_by = "record_name";
+					$_SESSION['sort-by'] = "record_name";
+				} else {
+					$_SESSION['sort-by'] = "artist_name";
 				}
 			}
-			$sorted_by_artist = ($sort_by == "artist_name"); ?>
+			$sorted_by_artist = ($_SESSION['sort-by'] == "artist_name"); 
+			
+			if($_GET["message"]) { ?>
+			<script>
+				$.growl("<?php echo $_GET["message"] ?>");
+			</script>
+		<?php } ?>
 
 		<form action="record_catalog.php" id="sort-by-artist" method="post">
 			<input type="hidden" name="sort-by" value="artist" /> 
@@ -111,7 +120,7 @@
 							$conn = mysql_connect($servername, $username, $password); if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
 							$db_selected = mysql_select_db($dbname, $conn);  if (!$db_selected) {die ('Can\'t use the db : ' . mysql_error());}
 							
-							$result = mysql_query("SELECT * FROM Record ORDER BY " . $sort_by); 
+							$result = mysql_query("SELECT * FROM Record ORDER BY " . $_SESSION['sort-by']);
 							
 							$counter = 0; // used just coloring effects
 							$offset = 0;
@@ -122,7 +131,7 @@
 							$current_letter = NULL;
 							
 							while($row = mysql_fetch_array($result)) {  //while loop is closed in next php tag
-								$current_letter = strtoupper(substr($row[$sort_by], 0, 1));
+								$current_letter = strtoupper(substr($row[$_SESSION['sort-by']], 0, 1));
 								
 								if($current_letter !== $previous_letter) {
 									$previous_letter = $current_letter;

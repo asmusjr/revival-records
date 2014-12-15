@@ -16,5 +16,5 @@
 	}
 ?>
 <script>
-    window.location = "my_records.php";
+    window.location= "my_records.php?message=" + "<?php echo $_POST['record_name']?> by <?php echo $_POST['artist_name']?> removed";
 </script>

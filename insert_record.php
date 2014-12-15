@@ -18,5 +18,5 @@
 	$_SESSION['myRecords'][$count] = $new_record;
 ?>
 <script>
-    window.location = "record_catalog.php";
+	window.location= "record_catalog.php?message=" + "<?php echo $_POST['record_name']?> by <?php echo $_POST['artist_name']?> added";
 </script>
