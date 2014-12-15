@@ -6,6 +6,10 @@ $(document).ready(function() {		// updates active link on navbar
 	} else {
 		li.parent().addClass('active');
 	}
+	
+	CKEDITOR.config.allowedContent = true;
+	CKEDITOR.config.contentsCss = [CKEDITOR.basePath + 'contents.css', '../css/master.css'];
+    CKEDITOR.replace('content-1');
 });
 
 function populate(recordID, artistName, recordName, recordYear, genre){

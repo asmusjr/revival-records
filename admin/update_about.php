@@ -21,12 +21,8 @@
         <script src="../js/admin.js"></script>
     	<script src="../js/jQuery.jPlayer.2.7.0/jquery.jplayer.min.js"></script>
 	</head>
-	<body id="admin-body">
+	<body id="admin">
 		<?php include 'header-footer.php' ?>
-        
-        <?php echo $_SESSION['myvar']; ?>
-		
-		
 		<div class="container">
 			<div class="row main-content">
 				<div class=" col-md-12">

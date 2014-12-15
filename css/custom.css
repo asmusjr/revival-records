@@ -2,22 +2,24 @@
 /*              COMMON              */
 /* -------------------------------- */
 body {
-	background-image:url("../img/swirl_pattern.png"); /* source: Subtle Patterns, Uday -- http://subtlepatterns.com/swirl-2/ */
 	font-family:Century Gothic, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color:#333333;
 	font-size:13px;
 	line-height:18px;
-	padding-top:100px; /* for fixed navbar */
-	padding-bottom:50px; /* for fixe footer */
+}
+#swirl {		/* had to separate these out to eliminate annoyances with ckeditor */
+	background-image:url("../img/swirl_pattern.png"); /* source: Subtle Patterns, Uday -- http://subtlepatterns.com/swirl-2/ */
+}
+#admin {
+	background-image:url("../img/escheresque_ste.png"); /* downloaded from www.subtlepatterns.com */
+}
+#swirl, #admin {
+	padding:100px 0 50px 0;	/* for navbar and footer */
 }
 .main-content {
 	margin:10px 0 10px 0;
 	padding:10px 10px 25px 10px;
 	background-color:white;
-	
-	/* old border style:
-	border:4px solid;
-	border-radius:25px; */
 	border-width:5px;
 	border-image:url("../img/red_texture2.png") 20 stretch;
 }
@@ -32,6 +34,11 @@ a:active {
 a:hover {
 	color:grey;
 	text-decoration:none;
+}
+@media (max-width:991px){
+	audio{
+		display:none;
+	}
 }
 /* -------------------------------- */
 /*          TOP NAVIGATION          */
@@ -70,11 +77,6 @@ a:hover {
 	width:100%;
 	height:170px;
 	pointer-events:none; /* allows clicking underlying elements */
-}
-@media (max-width:991px){
-	audio{
-		display:none;
-	}
 }
 /* -------------------------------- */
 /*              FOOTER              */
@@ -374,6 +376,17 @@ a:hover .add-record-box  {
 	width:140px;
 	height:140px;
 }
+@media (max-width:767px){
+	.carousel {
+		height:300px;
+	}
+	.carousel .item {
+		height:300px;
+	}
+	.carousel-inner > .item > img {
+		height:300px;
+	}
+}
 h2:first-of-type { padding-top: 0; }
 .pagination {
   height: 36px;
@@ -503,9 +516,6 @@ h2:first-of-type { padding-top: 0; }
 /* -------------------------------- */
 /*            ADMIN PAGES           */
 /* -------------------------------- */
-#admin-body {
-	background-image:url("../img/escheresque_ste.png"); /* downloaded from www.subtlepatterns.com */
-}
 .gradient-background-2 {
 	background:-moz-linear-gradient(top,  rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.9)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */

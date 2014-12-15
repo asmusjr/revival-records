@@ -23,7 +23,7 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
 		<script>$.validate();</script>
 	</head>
-	<body>
+	<body id="swirl">
 		<?php include 'header-footer.php'; ?>
 		
 		<div class="container">

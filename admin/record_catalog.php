@@ -23,11 +23,8 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
 		<script>$.validate();</script>
 	</head>
-	<body id="admin-body">
+	<body id="admin">
 		<?php include 'header-footer.php' ?>
-        
-        <?php echo $_SESSION['myvar']; ?>
-		
 		<div class="container">
 			<div class="row main-content">
 				<div class="col-md-8">

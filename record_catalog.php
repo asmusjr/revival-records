@@ -21,7 +21,7 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 	</head>
-	<body>
+	<body id="swirl">
 		<?php include 'header-footer.php' ?>
 
 		<?php

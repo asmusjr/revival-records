@@ -21,7 +21,7 @@
         <script src="js/main.js"></script>
 		<script src="js/contact.js"></script>
     </head>
-	<body>
+	<body id="swirl">
 		<?php include 'header-footer.php' ?>
 		<div class="container">
 			<div class="row main-content" id="left-side">

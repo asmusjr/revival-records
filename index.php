@@ -20,7 +20,7 @@
         <script src="js/main.js"></script>
     </head>
     
-    <body>
+    <body id="swirl">
 		<?php include 'header-footer.php' ?>
         
 		<!--[if lt IE 7]>
@@ -29,6 +29,19 @@
 
 		<div class="container">
 			<div class="row">
+		<?php
+			$content_1 = "home/content-1.html";
+			$file_1 = fopen($content_1, "r") or die("Unable to load content 1");
+			$file_1_content = htmlspecialchars_decode(fread($file_1, filesize($content_1)));
+		
+			$content_2 = "home/content-2.html";
+			$file_2 = fopen($content_2, "r") or die("Unable to load content 2");
+			$file_2_content = htmlspecialchars_decode(fread($file_2, filesize($content_2)));
+			
+			$content_3 = "home/content-3.html";
+			$file_3 = fopen($content_3, "r") or die("Unable to load content 2");
+			$file_3_content = htmlspecialchars_decode(fread($file_3, filesize($content_3)));
+		?>
 				<div class="col-xs-12 col-lg-10 col-lg-offset-1">
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
@@ -76,19 +89,13 @@
 			</div>
 			<div class="row text-center marketing main-content">
 				<div class="col-md-4">
-					<img class="img-circle promo-image" src="img/browsing-records.png">
-					<h2><?php include 'home/title-1.txt' ?></h2>
-					<?php htmlspecialchars_decode(include 'home/content-1.html', ENT_QUOTES) ?>
+					<?php echo $file_1_content ?>
 				</div>
 				<div class="col-md-4">
-					<img class="img-circle promo-image" src="img/record-spinner.png">
-					<h2><?php include 'home/title-2.txt'?></h2>
-					<?php include 'home/content-2.html'?>
+					<?php echo $file_2_content ?>
 				</div>
 				<div class="col-md-4">
-					<img class="img-circle promo-image" src="img/store-front.png">
-					<h2><?php include 'home/title-3.txt'?></h2>
-					<?php include 'home/content-3.html'?>
+					<?php echo $file_3_content ?>
 				</div>
 			</div>
 		</div>

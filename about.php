@@ -20,7 +20,7 @@
         <script src="js/main.js"></script>
         <script src="js/about.js"></script>
 	</head>
-	<body>
+	<body id="swirl">
 		<?php include 'header-footer.php' ?>
         <div id="polaroid-background"></div>
         <div id="polaroid-large"></div>
