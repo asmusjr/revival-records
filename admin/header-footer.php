@@ -28,7 +28,7 @@
 <nav class="navbar navbar-fixed-bottom" role="navigation">
 	<footer class="navbar-default admin-footer">
 		<div class="container">
-			<p class="text-center">You are currently in the <u>administrative tools</u>. <a href="../index.php">Click here to return to the normal website.</a></p>
+			<p class="text-center">You are currently in the <u>admin tools</u>. <a href="../index.php">Click to return to the normal website.</a></p>
 		</div>
 	</footer>
 </nav>
