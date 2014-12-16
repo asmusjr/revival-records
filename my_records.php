@@ -41,21 +41,21 @@
 					<p>To add records to this list, navigate to the <a href="record_catalog.php">Records Catalog</a>.</p>
 					<p>Ready to send your request? Click the submission button for in-store pick-up.</p>
 					<hr/>
-					<ul class="nav nav-pills text-center" role="tablist">
-						<form action="clear_all_records.php" id="clear_all_records" method="post">
-						<li role="presentation" class="active"><a href="#" onclick="$('#clear_all_records').submit()">Clear All Records</a></li>
-						</form>
-					</ul>
+					<form action="clear_all_records.php" id="clear_all_records" method="post">
+						<ul class="nav nav-pills text-center" role="tablist">
+							<li role="presentation" class="active"><a href="#" onclick="$('#clear_all_records').submit()">Clear All Records</a></li>
+						</ul>
+					</form>
 				</div>
 				<div class="col-md-2 text-center">
 					<div class="row">
-						<div class="col-xs-12">
+						<div class="col-xs-6 col-md-12">
 							<p><a href="record_catalog.php"><button class="btn btn-default btn-record"><img class="record-btn-image2" src="img/catalog-notext-icon.png"/><br/>Record Catalog</button></a></p>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
+						<div class="col-xs-6 col-md-12">
 							<p><a href="my_records.php"><button class="btn btn-danger btn-record"><img class="record-btn-image" src="img/record.png"/><br/>My Records</button></a></p>
+						</div>
+						<div class="col-xs-12 col-md-12">
 							<button class="btn btn-sample" data-toggle="modal" data-target="#myModal" id="createRecord">Complete &<br/>Send Request</button>
 						</div>
 					</div>

@@ -65,12 +65,10 @@
 				</div>
 				<div class="col-md-2 text-center">
 					<div class="row">
-						<div class="col-xs-12">
+						<div class="col-xs-6 col-md-12">
 							<p><a href="record_catalog.php"><button class="btn btn-danger btn-record"><img class="record-btn-image2" src="img/catalog-notext-icon.png"/><br/>Record Catalog</button></a></p>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
+						<div class="col-xs-6 col-md-12">
 							<p><a href="my_records.php"><button class="btn btn-default btn-record"><img class="record-btn-image" src="img/record.png"/><br/>My Records</button></a></p>
 						</div>
 					</div>
@@ -122,7 +120,7 @@
 							
 							$result = mysql_query("SELECT * FROM Record ORDER BY " . $_SESSION['sort-by']);
 							
-							$counter = 0; // used just coloring effects
+							$counter = 0; // just coloring effects
 							$offset = 0;
 							
 							$id = 0;
@@ -148,13 +146,12 @@
 									<input type="hidden" value="<?php echo $row['artist_name'];?>" name="artist_name" />
 									<input type="hidden" value="<?php echo $row['genre']; ?>" name="genre" />
 									<input type="hidden" value="<?php echo $row['record_year']; ?>" name="record_year" />
-										<a onclick="$('#insert_record-<?php echo $id ?>').submit()" href="#" style="display:block">
-											<li class="media add-record-box">
-												<img src="img/recordrequest-notext-icon.png" width="50px">
-												ADD
-											</li>
-										</a>
-									</input>
+									<a onclick="$('#insert_record-<?php echo $id ?>').submit()" href="#" style="display:block">
+										<li class="media add-record-box">
+											<img src="img/recordrequest-notext-icon.png" class="add-record-img">
+											ADD
+										</li>
+									</a>
 								</form>
 								<?php if($sorted_by_artist) { ?>
 								<p>Artist: <?php echo $row['artist_name'] ?></p>

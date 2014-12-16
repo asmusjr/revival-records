@@ -278,12 +278,21 @@ footer a:active {
 @media (max-width:768px){
 	.records-list li{
 		width:50%;
-		font-size:12px;
+		font-size:10px;
+		overflow:scroll;
 	}
+	.records-list p {
+		margin:0;
+		padding:0;
+	}
+}
+.add-record-img {
+	width:50px;
 }
 .add-record-box {
 	background-color:grey !important;
 	height:90px !important;
+	width:60px;
 }
 a:hover .add-record-box  {
 	background-color:black !important;
